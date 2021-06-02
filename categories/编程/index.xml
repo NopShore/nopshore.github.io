@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>编程 on 无岸的Blog</title>
+    <link>https://nopshore.top/categories/%E7%BC%96%E7%A8%8B/</link>
+    <description>Recent content in 编程 on 无岸的Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>&amp;copy; 2019-2021 &lt;a href=&#34;https://nopshore.top&#34;&gt;无岸&lt;/a&gt;
+</copyright>
+    <lastBuildDate>Fri, 11 Oct 2019 17:46:48 +0800</lastBuildDate><atom:link href="https://nopshore.top/categories/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java面向对象概述（二）：封装</title>
+      <link>https://nopshore.top/posts/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A6%82%E8%BF%B0%E4%BA%8C%E5%B0%81%E8%A3%85/</link>
+      <pubDate>Fri, 11 Oct 2019 17:46:48 +0800</pubDate>
+      
+      <guid>https://nopshore.top/posts/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A6%82%E8%BF%B0%E4%BA%8C%E5%B0%81%E8%A3%85/</guid>
+      <description>封装的作用和优点 减少耦合 保护数据不被外界直接访问 使外部传进来的数据得到效验 保证了安全性 如何封装？ 使用访问权限修饰符对数据进行权限控制 public protected default private 演示 public class Demo{</description>
+    </item>
+    
+    <item>
+      <title>Java面向对象概述（一）：类的定义与实例化</title>
+      <link>https://nopshore.top/posts/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A6%82%E8%BF%B0%E4%B8%80%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%AE%9E%E4%BE%8B%E5%8C%96/</link>
+      <pubDate>Fri, 11 Oct 2019 15:48:42 +0800</pubDate>
+      
+      <guid>https://nopshore.top/posts/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A6%82%E8%BF%B0%E4%B8%80%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%AE%9E%E4%BE%8B%E5%8C%96/</guid>
+      <description>面向对象三大特征 封装 保护数据不被外部访问 继承 对父类功能的扩展 多态 一个对象的多种形态 类和对象 类是对某一类事物的具有相同特征的抽象，是对象的模板。 对象是类</description>
+    </item>
+    
+    <item>
+      <title>C语言冒泡排序算法</title>
+      <link>https://nopshore.top/posts/c%E8%AF%AD%E8%A8%80%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Mon, 26 Aug 2019 20:52:48 +0800</pubDate>
+      
+      <guid>https://nopshore.top/posts/c%E8%AF%AD%E8%A8%80%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</guid>
+      <description>冒泡排序基本思想 不断比较数组中相邻的两个元素，让两个元素中较大的元素后移，经过一轮比较后，数值中最大的元素将会移动到数组末尾位置，第二轮将数组第二大的</description>
+    </item>
+    
+    <item>
+      <title>C语言的复杂声明</title>
+      <link>https://nopshore.top/posts/c%E8%AF%AD%E8%A8%80%E7%9A%84%E5%A4%8D%E6%9D%82%E5%A3%B0%E6%98%8E/</link>
+      <pubDate>Fri, 09 Aug 2019 15:33:26 +0800</pubDate>
+      
+      <guid>https://nopshore.top/posts/c%E8%AF%AD%E8%A8%80%E7%9A%84%E5%A4%8D%E6%9D%82%E5%A3%B0%E6%98%8E/</guid>
+      <description>指针的定义与使用 int i = 5; // 声明一个int类型的变量，把5赋值给它。 int *p; // 声明一个指向int类型的指针 p = &amp;amp;i; // 把i自身的地址赋值给指针*p printf(&amp;quot;%d %p %p %p&amp;quot;,*p,&amp;amp;p,p,&amp;amp;i); 最后的</description>
+    </item>
+    
+  </channel>
+</rss>

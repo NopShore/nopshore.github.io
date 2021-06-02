@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang='zh' ><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+<title>C语言的复杂声明 | 无岸的Blog</title>
+
+<meta name="generator" content="Hugo Eureka 0.8.0" />
+<link rel="stylesheet" href="https://nopshore.top/css/eureka.min.css">
+<script defer src="https://nopshore.top/js/eureka.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js"
+   crossorigin></script>
+
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js"
+     crossorigin></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+   integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
+  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js" 
+  integrity="sha256-Zmpaaj&#43;GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE="  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://nopshore.top/images/icon_hu82a47dd308082b5625d3422584f28239_9342_32x32_fill_box_center_2.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://nopshore.top/images/icon_hu82a47dd308082b5625d3422584f28239_9342_180x180_fill_box_center_2.png">
+
+<meta name="description"
+  content="C语言的复杂声明">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"文章",
+      "item":"https://nopshore.top/posts/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"C语言的复杂声明",
+      "item":"https://nopshore.top/posts/c%E8%AF%AD%E8%A8%80%E7%9A%84%E5%A4%8D%E6%9D%82%E5%A3%B0%E6%98%8E/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://nopshore.top/posts/c%E8%AF%AD%E8%A8%80%E7%9A%84%E5%A4%8D%E6%9D%82%E5%A3%B0%E6%98%8E/"
+    },
+    "headline": "C语言的复杂声明 | 无岸的Blog","datePublished": "2019-08-09T15:33:26+08:00",
+    "dateModified": "2021-06-02T08:53:38+08:00",
+    "wordCount":  1723 ,
+    "author": {
+        "@type": "Person",
+        "name": "nopshore-author"
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "nopshore",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://nopshore.top/images/icon.png"
+        }
+        },
+    "description": "C语言的复杂声明"
+}
+</script><meta property="og:title" content="C语言的复杂声明 | 无岸的Blog" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://nopshore.top/images/icon.png">
+
+
+<meta property="og:url" content="https://nopshore.top/posts/c%E8%AF%AD%E8%A8%80%E7%9A%84%E5%A4%8D%E6%9D%82%E5%A3%B0%E6%98%8E/" />
+
+
+
+<meta property="og:description" content="C语言的复杂声明" />
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="无岸的Blog" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2019-08-09T15:33:26&#43;08:00" />
+
+
+<meta property="article:modified_time" content="2021-06-02T08:53:38&#43;08:00" />
+
+
+
+<meta property="article:section" content="posts" />
+
+
+<meta property="article:tag" content="C语言" />
+
+<meta property="article:tag" content="指针" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body class="flex flex-col min-h-screen">
+  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+    <div class="w-full max-w-screen-xl mx-auto"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="mr-6 text-primary-text text-xl font-bold">无岸的Blog</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/authors/nopshore-author/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">关于</a>
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">文章</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">文档</a>
+            <a href="/categories/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">分类</a>
+            <a href="/tags/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">标签</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+  </header>
+  <main class="flex-grow pt-16">
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+
+
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">C语言的复杂声明</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2019-08-09</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>4分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://nopshore.top/categories/%E7%BC%96%E7%A8%8B/" class="hover:text-eureka">编程</a>
+        
+    </div>
+    
+
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-th-list mr-1"></i>
+        
+        <a href="https://nopshore.top/series/c%E8%AF%AD%E8%A8%80/" class="hover:text-eureka">C语言</a>
+        
+    </div>
+    
+</div>
+        
+        
+        
+
+        <div class="content">
+            <h2 id="指针的定义与使用">指针的定义与使用</h2>
+<pre><code class="language-C">int i = 5; // 声明一个int类型的变量，把5赋值给它。
+int *p; // 声明一个指向int类型的指针
+p = &amp;i; // 把i自身的地址赋值给指针*p
+printf(&quot;%d %p %p %p&quot;,*p,&amp;p,p,&amp;i);
+</code></pre>
+<p><strong>最后的 printf(&quot;%d %p %p&quot;,*p,p,&amp;i); 解析：</strong></p>
+<p>第一个 <strong>*p</strong> 输出的是5（解引用得到p指向的地址存放的值）。<br>
+第二个 <strong>&amp;p</strong> 输出的是指针p自身的地址。<br>
+第三个 <strong>p</strong> 输出的是指针p指向的地址，p = &amp;i  所以p指向的是i的地址。<br>
+第四个 <strong>&amp;i</strong> 输出的是i自身的地址。</p>
+</br>
+<h2 id="多级指针">多级指针</h2>
+<pre><code class="language-C">int i = 2;
+int *p1 = &amp;i;
+int **p2 = &amp;p1; // 声明一个二级指针p2，这个指针指向指针p1自身的地址。
+printf(&quot; %d\n %p\n %p\n %p\n %p\n&quot;,**p2,p2,*p2,p1,&amp;p1);
+</code></pre>
+<p><strong>最后的 printf(&quot; %d\n %p\n %p\n %p\n %p\n&quot;,**p2,p2,*p2,p1,&amp;p1); 输出结果：</strong></p>
+<p>2<br>
+0x7ffee13a2b08<br>
+0x7ffee13a2b04<br>
+0x7ffee13a2b04<br>
+0x7ffee13a2b08<br>
+<strong>解析：</strong><br>
+第一个 <strong>**p2</strong> 输出的是2（双重解引用 p2的值是p1的地址,p1的值是i的地址，i的值为2）。<br>
+第二个 <strong>p2</strong>  输出的是p1自身的地址 （p2指向指针p1的地址）。<br>
+第三个 <strong>*p2</strong> 输出的是i自身的地址 （p2解引用得到p1指向的地址，p1指向i，所以是输出i自身的地址）。<br>
+第四个 <strong>p1</strong> 输出的是i自身的地址 （p1指向变量i）。 <br>
+第五个 <strong>&amp;p1</strong> 输出的是p1自身的地址。</p>
+</br>
+<h2 id="复杂声明">复杂声明</h2>
+<p>几个重要概念：</p>
+<ul>
+<li><strong>指针数组</strong>  元素为指针的数组</li>
+<li><strong>数组指针</strong>  指向数组的指针</li>
+<li><strong>指针函数</strong>  返回值为指针的函数</li>
+<li><strong>函数指针</strong>  指向函数的指针</li>
+</ul>
+<p>优先级规则：</p>
+<ul>
+<li><strong>优先级最高的是 声明中括号扩起来的内容</strong></li>
+<li><strong>其次是 后缀操作符 ( ) 、[ ]</strong></li>
+<li><strong>然后是 前缀操作符 *</strong></li>
+</ul>
+</br>
+<h3 id="简单的栗子">简单的栗子：</h3>
+<pre><code class="language-C">int *arr[5]; 
+</code></pre>
+<p>arr先和后面的[ ]结合，说明这是一个数组，再与前面的*结合，说明这个数组里的元素是指针，<br>
+所以这是一个<strong>指针数组</strong>。</p>
+</br>
+<pre><code class="language-C">int (*p)[5];
+</code></pre>
+<p>先看括号里的内容，p与*结合，说明这是一个指针，再与[ ]结合，说明这个指针指向数组，<br>
+所以这是一个<strong>数组指针</strong>。</p>
+</br>
+<pre><code class="language-C">int *func(int);
+</code></pre>
+<p>func先于( )结合，说明这是一个函数，函数的参数为int，再与func前面的*结合，说明返回值是一个指针，<br>
+所以这是一个<strong>指针函数</strong>。</p>
+</br>
+<pre><code class="language-C">int (*p)(int);
+</code></pre>
+<p>先看括号里的内容，p与*结合，说明这是一个指针，再与外面的括号结合，说明这个指针指向一个函数，外面的括号里是int，说明这个函数的参数是int类型的，<br>
+所以这是一个<strong>函数指针</strong>。</p>
+</br>
+<h3 id="复杂一点">复杂一点：</h3>
+<pre><code class="language-C">int *(*p)[5];
+</code></pre>
+<p>先看括号里的内容，p于<em>结合，说明这是指针，再与[ ]结合，说明这个指针指向数组，再与第一个</em>结合，说明这个数组里的元素是指针。<br>
+所以这是一个<strong>数组指针</strong>，指向的数组的里面的元素应该是int *类型的。</p>
+</br>
+<pre><code class="language-C">int (*arr[5])(int);
+</code></pre>
+<p>先看arr所在的括号里的内容，<em>arr[5]，arr先与[ ]结合，说明这是一个数组，再与</em>结合，说明数组里的元素是指针，再与右边的括号结合，说明这个指针指向函数，这个函数的参数是int类型的。<br>
+所以这是<strong>指针数组</strong>，数组里的指针应该指向函数。</p>
+</br>
+<pre><code class="language-C">int *(*arr[5])[5];
+</code></pre>
+<p>先看arr所在的括号里的内容，<em>arr[5]，arr先与[ ]结合，说明这是一个数组，再与</em>结合，说明数组里的元素是指针，再与右边的[ ]结合，说明这个指针指向数组，再与*结合，说明这个数组存放的元素应该是指针。<br>
+所以这是<strong>指针数组</strong>，数组里的指针指向另一个指针数组。</p>
+</br>
+<h3 id="复杂指针声明">复杂指针声明：</h3>
+<pre><code class="language-C">int (*(*func)[5][6])[7][8]; 
+</code></pre>
+<p>先看func所在的括号，func先于<em>结合，说明这是指针，再与[5][6]结合，说明这个指针指向[5][6]的数组，再与第一个</em>结合，说明这个数组的元素为指针，再与右边的[7][8]结合，说明这个指针指向[7][8]的数组，这个数组里的元素是int类型的。<br>
+<strong>简单说</strong>：这是一个<strong>数组指针</strong>，指向一个[5][6]二维数组，数组的元素是指向[7][8]二维数组的指针。</p>
+</br>
+<pre><code class="language-C">int (*(*(*func)(int *))[5])(int *);
+</code></pre>
+<p>先看func所在的括号，func先于*结合，说明这是指针，再与右边的(int <em>)结合，说明这个指针指向函数，函数的参数是int <em>类型的，再与第二个</em>结合，说明这个函数的返回值是指针，再与[5]结合，说明这个函数返回的是[5]数组的指针，再与第一个</em>结合，说明返回的这个数组指针指向另一个指针，这个指针指向参数是int *类型返回值是int类型的函数。<br>
+<strong>简单说</strong>：这是一个<strong>函数指针</strong>，函数返回值是指向[5]数组的指针，数组的元素是一个函数指针。</p>
+</br>
+<pre><code class="language-C">int (*(*func[7][8][9])(int*))[5];
+</code></pre>
+<p>先看func所在的括号，func先于[7][8][9]结合，func前面是*，说明这是一个指针数组，再与(int *)结合，说明指向一个参数是int *的函数，再与第一个*结合，说明这个函数的返回值是指针，这个指针指向[5]的数组，数组里的元素是int 类型的。</p>
+<p><strong>简单说</strong>：这是一个<strong>指针数组</strong>，这个数组的容量是[7][8][9]，数组元素是函数指针，函数的返回的值是指向[5]数组的指针。</p>
+</br>
+
+        </div>
+        
+        <div class="my-4">
+    
+    <a href="https://nopshore.top/tags/c%E8%AF%AD%E8%A8%80/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#C语言</a>
+    
+    <a href="https://nopshore.top/tags/%E6%8C%87%E9%92%88/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#指针</a>
+    
+</div>
+        
+        
+        
+
+
+        
+        
+        <div class="py-2">
+    
+    <div class="flex flex-col md:flex-row items-center my-8">
+        <a href="https://nopshore.top/authors/nopshore-author/" class="w-24 h-24 md:mr-4">
+            
+            
+            <img src="https://nopshore.top/images/avatar-nopshore-5.jpg" class="w-full bg-primary-bg rounded-full" alt="Avatar">
+            
+        </a>
+        <div class="w-full md:w-auto mt-4 md:mt-0">
+            <a href="https://nopshore.top/authors/nopshore-author/" class="block font-bold text-lg pb-1 mb-2 border-b">无岸</a>
+            <span class="block pb-2">日出之美便在于它脱胎于最深的黑暗。</span>
+            
+            
+            
+            
+            
+            <a href="https://t.me/NopShore" class="mr-1">
+                <i class="fab fa-telegram"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://github.com/NopShore" class="mr-1">
+                <i class="fab fa-github"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://twitter.com/nopshore" class="mr-1">
+                <i class="fab fa-twitter"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="mailto:nopshore@163.com" class="mr-1">
+                <i class="fas fa-envelope"></i>
+            </a>
+            
+        </div>
+    </div>
+    
+</div>
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+        <span class="block font-bold">上一页</span>
+        <a href="https://nopshore.top/posts/c%E8%AF%AD%E8%A8%80%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" class="block">C语言冒泡排序算法</a>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+    </div>
+</div>
+
+        
+
+
+
+    </div>
+    
+    <div class="col-span-2">
+        
+        
+<div class="bg-secondary-bg rounded p-6">
+    <h3 class="text-lg font-semibold mb-4">系列文章</h3>
+    <div class="content">
+        
+        
+        <a href="https://nopshore.top/posts/c%E8%AF%AD%E8%A8%80%E7%9A%84%E5%A4%8D%E6%9D%82%E5%A3%B0%E6%98%8E/">C语言的复杂声明</a>
+        <br />
+        
+        
+    </div>
+</div>
+        
+        
+        <div class="sticky top-16 z-10 hidden lg:block px-6 py-4  bg-primary-bg ">
+    <span class="text-lg font-semibold">本页内容</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6 ">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#指针的定义与使用">指针的定义与使用</a></li>
+    <li><a href="#多级指针">多级指针</a></li>
+    <li><a href="#复杂声明">复杂声明</a>
+      <ul>
+        <li><a href="#简单的栗子">简单的栗子：</a></li>
+        <li><a href="#复杂一点">复杂一点：</a></li>
+        <li><a href="#复杂指针声明">复杂指针声明：</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        enableStickyToc();
+    });
+</script>
+        
+    </div>
+    
+
+    
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
+
+      </div>
+    </div>
+    
+  </main>
+  <footer class="pl-scrollbar">
+    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text">&copy; 2019-2021 <a href="https://nopshore.top">无岸</a>
+ &middot;  Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>算法 on 无岸的Blog</title>
+    <link>https://nopshore.top/tags/%E7%AE%97%E6%B3%95/</link>
+    <description>Recent content in 算法 on 无岸的Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>&amp;copy; 2019-2021 &lt;a href=&#34;https://nopshore.top&#34;&gt;无岸&lt;/a&gt;
+</copyright>
+    <lastBuildDate>Mon, 26 Aug 2019 20:52:48 +0800</lastBuildDate><atom:link href="https://nopshore.top/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C语言冒泡排序算法</title>
+      <link>https://nopshore.top/posts/c%E8%AF%AD%E8%A8%80%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Mon, 26 Aug 2019 20:52:48 +0800</pubDate>
+      
+      <guid>https://nopshore.top/posts/c%E8%AF%AD%E8%A8%80%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</guid>
+      <description>冒泡排序基本思想 不断比较数组中相邻的两个元素，让两个元素中较大的元素后移，经过一轮比较后，数值中最大的元素将会移动到数组末尾位置，第二轮将数组第二大的</description>
+    </item>
+    
+  </channel>
+</rss>

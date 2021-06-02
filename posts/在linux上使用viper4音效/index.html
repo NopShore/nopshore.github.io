@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang='zh' ><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+<title>在Linux上使用VIPER4音效 | 无岸的Blog</title>
+
+<meta name="generator" content="Hugo Eureka 0.8.0" />
+<link rel="stylesheet" href="https://nopshore.top/css/eureka.min.css">
+<script defer src="https://nopshore.top/js/eureka.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js"
+   crossorigin></script>
+
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js"
+     crossorigin></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+   integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
+  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js" 
+  integrity="sha256-Zmpaaj&#43;GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE="  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://nopshore.top/images/icon_hu82a47dd308082b5625d3422584f28239_9342_32x32_fill_box_center_2.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://nopshore.top/images/icon_hu82a47dd308082b5625d3422584f28239_9342_180x180_fill_box_center_2.png">
+
+<meta name="description"
+  content="linux安装VIPER4音效">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"文章",
+      "item":"https://nopshore.top/posts/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"在Linux上使用VIPER4音效",
+      "item":"https://nopshore.top/posts/%E5%9C%A8linux%E4%B8%8A%E4%BD%BF%E7%94%A8viper4%E9%9F%B3%E6%95%88/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://nopshore.top/posts/%E5%9C%A8linux%E4%B8%8A%E4%BD%BF%E7%94%A8viper4%E9%9F%B3%E6%95%88/"
+    },
+    "headline": "在Linux上使用VIPER4音效 | 无岸的Blog","datePublished": "2019-09-12T15:35:19+08:00",
+    "dateModified": "2021-06-02T09:06:08+08:00",
+    "wordCount":  1316 ,
+    "author": {
+        "@type": "Person",
+        "name": "nopshore-author"
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "nopshore",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://nopshore.top/images/icon.png"
+        }
+        },
+    "description": "linux安装VIPER4音效"
+}
+</script><meta property="og:title" content="在Linux上使用VIPER4音效 | 无岸的Blog" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://nopshore.top/images/icon.png">
+
+
+<meta property="og:url" content="https://nopshore.top/posts/%E5%9C%A8linux%E4%B8%8A%E4%BD%BF%E7%94%A8viper4%E9%9F%B3%E6%95%88/" />
+
+
+
+<meta property="og:description" content="linux安装VIPER4音效" />
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="无岸的Blog" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2019-09-12T15:35:19&#43;08:00" />
+
+
+<meta property="article:modified_time" content="2021-06-02T09:06:08&#43;08:00" />
+
+
+
+<meta property="article:section" content="posts" />
+
+
+<meta property="article:tag" content="Archlinux" />
+
+<meta property="article:tag" content="linux" />
+
+<meta property="article:tag" content="软件" />
+
+<meta property="article:tag" content="音效" />
+
+
+
+
+
+<body class="flex flex-col min-h-screen">
+  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+    <div class="w-full max-w-screen-xl mx-auto"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="mr-6 text-primary-text text-xl font-bold">无岸的Blog</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/authors/nopshore-author/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">关于</a>
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">文章</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">文档</a>
+            <a href="/categories/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">分类</a>
+            <a href="/tags/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">标签</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+  </header>
+  <main class="flex-grow pt-16">
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+
+
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">在Linux上使用VIPER4音效</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2019-09-12</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>3分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://nopshore.top/categories/%E8%BD%AF%E4%BB%B6%E7%9B%B8%E5%85%B3/" class="hover:text-eureka">软件相关</a>
+        
+    </div>
+    
+
+    
+</div>
+        
+        
+        
+
+        <div class="content">
+            <h2 id="viper4音效是什么">VIPER4音效是什么？</h2>
+<p>摘自百度百科：<a href="https://baike.baidu.com/item/ViPER4Android/8815475">VIPER4Android</a></p>
+<blockquote>
+<p>ViPER4Android XHiFi 是一款用于Android系统的全局音效驱动，主要用于还原音频中原有的声音细节，包括回放增益、均衡器、音频重构和限幅器。并于2013年9月5日更新至2.1.0.2-1后停止更新，其功能并入FX版本。（注意：作者并未明确表示XHIFI版可支持安卓4.4）
+ViPER4Android FX 同样是一款用于Android系统的全局音效驱动，主要用于给音频渲染各种各样的音频效果，包括回放增益、均衡器、脉冲反馈处理、场环绕、数字混响、动态系统和限幅器。无浮点运算的机型(如采用PXA920 CPU的机器)不支持脉冲反馈处理和耳机环绕核擎+效果。持续更新至今。(注：当前版本驱动选择也受到平台限制，无NEON模块的平台无法选择高质量以及发烧级驱动)</p>
+</blockquote>
+</br>
+<p>VIPER4论坛：<a href="http://forum.vipersaudio.com/">http://forum.vipersaudio.com/</a></p>
+<p>支持平台：</p>
+<ul>
+<li>Android</li>
+<li>Windows</li>
+<li>Linux (Github)</li>
+</ul>
+<p>大家所熟知的有两个版本，安卓平台VIPER4Android简称V4A；Windows平台VIPER4Windows简称V4W。博主在逛Github中发现了VIPER4的Linux版本<a href="https://github.com/noahbliss/Viper4Linux">VIPER4Linux</a>。</p>
+</br>
+<h2 id="安装viper4linux">安装VIPER4Linux</h2>
+<p>VIPER4Linux项目地址：https://github.com/noahbliss/Viper4Linux</p>
+<p>如果你使用ArchLinux的话输入这条命令直接安装：</p>
+<pre><code class="language-shell"> yay -S viper4linux-git 
+</code></pre>
+<p>其他发行版或者需要手动安装详见项目介绍：https://github.com/noahbliss/Viper4Linux</p>
+</br>
+<h2 id="安装图形前端">安装图形前端</h2>
+<p>如果需要图形界面的话，则另外还需要安装一个GUI前端的包：</p>
+<pre><code class="language-shell"> yay -S viper4linux-gui-git
+</code></pre>
+<p>VIPER4Linux图形前端项目地址：https://github.com/ThePBone/Viper4Linux-GUI</p>
+</br>
+<h2 id="配置">配置</h2>
+<p>先在~/.config/viper4linux目录下新建一个文件：devices.conf</p>
+<pre><code class="language-shell"> touch ~/.config/viper4linux/devices.conf
+</code></pre>
+<p>如果你的shell环境是英文,则命令行输入：</p>
+<pre><code class="language-shell"> pactl list sinks | grep &quot;Name: &quot; -A1
+</code></pre>
+<p>如果你的shell环境是中文,则命令行输入：</p>
+<pre><code class="language-shell"> pactl list sinks | grep &quot;名称：&quot; -A1
+</code></pre>
+<p>找到 <strong>Name:</strong> 或者 <strong>名称：</strong> 后面的字段，复制</p>
+<p>打开devices.conf 写入下面内容：</p>
+<pre><code class="language-shell">location=把Name: 或者 名称：后面字段复制进来
+</code></pre>
+</br>
+<p><strong>比如我输入 pactl list sinks | grep &ldquo;名称：&rdquo; -A1 结果是：</strong></p>
+<pre><code class="language-shell">$ pactl list sinks | grep &quot;名称：&quot; -A1
+名称：alsa_output.pci-0000_00_1f.3.analog-stereo
+描述：内置音频 模拟立体声
+</code></pre>
+<p>则在devices.conf文件中写入</p>
+<pre><code class="language-shell">location=alsa_output.pci-0000_00_1f.3.analog-stereo
+</code></pre>
+</br>
+<h2 id="使用">使用</h2>
+<p>完成上面的配置后就可以启动了</p>
+<p>启动 VIPER4Linux</p>
+<pre><code class="language-shell">viper start
+</code></pre>
+<p>重新启动</p>
+<pre><code class="language-shell">viper restart
+</code></pre>
+<p>关闭</p>
+<pre><code class="language-shell">viper stop
+</code></pre>
+<p>查看状态</p>
+<pre><code class="language-shell">viper status
+</code></pre>
+</br>
+<h2 id="配置音效">配置音效</h2>
+<p>音效的配置在  ~/.config/viper4linux/audio.conf 中 可按自己的喜好修改</p>
+<p>建议配合VIPER4Linux图形前端进行管理配置</p>
+<p>脉冲反馈样本 可在 ~/ 下建立一个名为IRS的文件夹 把样本放在文件夹配合 VIPER4Linux图形前端进行管理</p>
+<p>VIPER4音效配置：https://github.com/noahbliss/Viper4Linux-Configs</p>
+<p>更多音效配置或者脉冲反馈样本可在 VIPER4论坛：http://forum.vipersaudio.com/ 自行寻找</p>
+</br>
+
+        </div>
+        
+        <div class="my-4">
+    
+    <a href="https://nopshore.top/tags/archlinux/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Archlinux</a>
+    
+    <a href="https://nopshore.top/tags/linux/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#linux</a>
+    
+    <a href="https://nopshore.top/tags/%E8%BD%AF%E4%BB%B6/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#软件</a>
+    
+    <a href="https://nopshore.top/tags/%E9%9F%B3%E6%95%88/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#音效</a>
+    
+</div>
+        
+        
+        
+
+
+        
+        
+        <div class="py-2">
+    
+    <div class="flex flex-col md:flex-row items-center my-8">
+        <a href="https://nopshore.top/authors/nopshore-author/" class="w-24 h-24 md:mr-4">
+            
+            
+            <img src="https://nopshore.top/images/avatar-nopshore-5.jpg" class="w-full bg-primary-bg rounded-full" alt="Avatar">
+            
+        </a>
+        <div class="w-full md:w-auto mt-4 md:mt-0">
+            <a href="https://nopshore.top/authors/nopshore-author/" class="block font-bold text-lg pb-1 mb-2 border-b">无岸</a>
+            <span class="block pb-2">日出之美便在于它脱胎于最深的黑暗。</span>
+            
+            
+            
+            
+            
+            <a href="https://t.me/NopShore" class="mr-1">
+                <i class="fab fa-telegram"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://github.com/NopShore" class="mr-1">
+                <i class="fab fa-github"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://twitter.com/nopshore" class="mr-1">
+                <i class="fab fa-twitter"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="mailto:nopshore@163.com" class="mr-1">
+                <i class="fas fa-envelope"></i>
+            </a>
+            
+        </div>
+    </div>
+    
+</div>
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+        <span class="block font-bold">上一页</span>
+        <a href="https://nopshore.top/posts/%E8%A7%A3%E5%86%B3proxychains%E4%B8%8D%E6%94%AF%E6%8C%81yay%E7%9A%84%E9%97%AE%E9%A2%98/" class="block">解决proxychains不支持yay的问题</a>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">下一页</span>
+        <a href="https://nopshore.top/posts/c%E8%AF%AD%E8%A8%80%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" class="block">C语言冒泡排序算法</a>
+        
+    </div>
+</div>
+
+        
+
+
+
+    </div>
+    
+    <div class="col-span-2">
+        
+        
+        <div class="sticky top-16 z-10 hidden lg:block px-6 py-4  bg-primary-bg ">
+    <span class="text-lg font-semibold">本页内容</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6 ">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#viper4音效是什么">VIPER4音效是什么？</a></li>
+    <li><a href="#安装viper4linux">安装VIPER4Linux</a></li>
+    <li><a href="#安装图形前端">安装图形前端</a></li>
+    <li><a href="#配置">配置</a></li>
+    <li><a href="#使用">使用</a></li>
+    <li><a href="#配置音效">配置音效</a></li>
+  </ul>
+</nav>
+</div>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        enableStickyToc();
+    });
+</script>
+        
+    </div>
+    
+
+    
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
+
+      </div>
+    </div>
+    
+  </main>
+  <footer class="pl-scrollbar">
+    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text">&copy; 2019-2021 <a href="https://nopshore.top">无岸</a>
+ &middot;  Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+  </footer>
+</body>
+
+</html>

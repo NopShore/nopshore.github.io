@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>proxychains on 无岸的Blog</title>
+    <link>https://nopshore.top/tags/proxychains/</link>
+    <description>Recent content in proxychains on 无岸的Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>&amp;copy; 2019-2021 &lt;a href=&#34;https://nopshore.top&#34;&gt;无岸&lt;/a&gt;
+</copyright>
+    <lastBuildDate>Thu, 26 Sep 2019 15:16:17 +0800</lastBuildDate><atom:link href="https://nopshore.top/tags/proxychains/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>解决proxychains不支持yay的问题</title>
+      <link>https://nopshore.top/posts/%E8%A7%A3%E5%86%B3proxychains%E4%B8%8D%E6%94%AF%E6%8C%81yay%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Thu, 26 Sep 2019 15:16:17 +0800</pubDate>
+      
+      <guid>https://nopshore.top/posts/%E8%A7%A3%E5%86%B3proxychains%E4%B8%8D%E6%94%AF%E6%8C%81yay%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+      <description>问题如下： $ proxychains yay -S petal [proxychains] config file found: /etc/proxychains.conf [proxychains] preloading /usr/lib/libproxychains4.so [proxychains] DLL init: proxychains-ng 4.14 Get https://aur.archlinux.org/rpc.php?arg%5B%5D=petal&amp;amp;type=info&amp;amp;v=5: dial tcp 224.0.0.1:443: connect: network is unreachable 解决方法： 修改proxychains配置文件，把proxy_dns注释掉。 打开prox</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>指针 on 无岸的Blog</title>
+    <link>https://nopshore.top/tags/%E6%8C%87%E9%92%88/</link>
+    <description>Recent content in 指针 on 无岸的Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>&amp;copy; 2019-2021 &lt;a href=&#34;https://nopshore.top&#34;&gt;无岸&lt;/a&gt;
+</copyright>
+    <lastBuildDate>Fri, 09 Aug 2019 15:33:26 +0800</lastBuildDate><atom:link href="https://nopshore.top/tags/%E6%8C%87%E9%92%88/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C语言的复杂声明</title>
+      <link>https://nopshore.top/posts/c%E8%AF%AD%E8%A8%80%E7%9A%84%E5%A4%8D%E6%9D%82%E5%A3%B0%E6%98%8E/</link>
+      <pubDate>Fri, 09 Aug 2019 15:33:26 +0800</pubDate>
+      
+      <guid>https://nopshore.top/posts/c%E8%AF%AD%E8%A8%80%E7%9A%84%E5%A4%8D%E6%9D%82%E5%A3%B0%E6%98%8E/</guid>
+      <description>指针的定义与使用 int i = 5; // 声明一个int类型的变量，把5赋值给它。 int *p; // 声明一个指向int类型的指针 p = &amp;amp;i; // 把i自身的地址赋值给指针*p printf(&amp;quot;%d %p %p %p&amp;quot;,*p,&amp;amp;p,p,&amp;amp;i); 最后的</description>
+    </item>
+    
+  </channel>
+</rss>

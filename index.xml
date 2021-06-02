@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>无岸的Blog</title>
+    <link>https://nopshore.top/</link>
+    <description>Recent content on 无岸的Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>&amp;copy; 2019-2021 &lt;a href=&#34;https://nopshore.top&#34;&gt;无岸&lt;/a&gt;
+</copyright>
+    <lastBuildDate>Fri, 27 Dec 2019 20:58:34 +0800</lastBuildDate><atom:link href="https://nopshore.top/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>解决在ArchLinux上Chrome页面滚动掉帧的问题（开启平滑滚动）</title>
+      <link>https://nopshore.top/posts/%E8%A7%A3%E5%86%B3%E5%9C%A8archlinux%E4%B8%8Achrome%E9%A1%B5%E9%9D%A2%E6%BB%9A%E5%8A%A8%E6%8E%89%E5%B8%A7%E7%9A%84%E9%97%AE%E9%A2%98%E5%BC%80%E5%90%AF%E5%B9%B3%E6%BB%91%E6%BB%9A%E5%8A%A8/</link>
+      <pubDate>Fri, 27 Dec 2019 20:58:34 +0800</pubDate>
+      
+      <guid>https://nopshore.top/posts/%E8%A7%A3%E5%86%B3%E5%9C%A8archlinux%E4%B8%8Achrome%E9%A1%B5%E9%9D%A2%E6%BB%9A%E5%8A%A8%E6%8E%89%E5%B8%A7%E7%9A%84%E9%97%AE%E9%A2%98%E5%BC%80%E5%90%AF%E5%B9%B3%E6%BB%91%E6%BB%9A%E5%8A%A8/</guid>
+      <description>解决方法 1.chrome地址栏输入：chrome://flags/#smooth-scrolling 2.第一项 Smooth Scrolling 选项选择 Disabled 3.点击右下脚 relaunch now 重启 4.</description>
+    </item>
+    
+    <item>
+      <title>Java面向对象概述（二）：封装</title>
+      <link>https://nopshore.top/posts/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A6%82%E8%BF%B0%E4%BA%8C%E5%B0%81%E8%A3%85/</link>
+      <pubDate>Fri, 11 Oct 2019 17:46:48 +0800</pubDate>
+      
+      <guid>https://nopshore.top/posts/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A6%82%E8%BF%B0%E4%BA%8C%E5%B0%81%E8%A3%85/</guid>
+      <description>封装的作用和优点 减少耦合 保护数据不被外界直接访问 使外部传进来的数据得到效验 保证了安全性 如何封装？ 使用访问权限修饰符对数据进行权限控制 public protected default private 演示 public class Demo{</description>
+    </item>
+    
+    <item>
+      <title>Java面向对象概述（一）：类的定义与实例化</title>
+      <link>https://nopshore.top/posts/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A6%82%E8%BF%B0%E4%B8%80%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%AE%9E%E4%BE%8B%E5%8C%96/</link>
+      <pubDate>Fri, 11 Oct 2019 15:48:42 +0800</pubDate>
+      
+      <guid>https://nopshore.top/posts/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A6%82%E8%BF%B0%E4%B8%80%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%AE%9E%E4%BE%8B%E5%8C%96/</guid>
+      <description>面向对象三大特征 封装 保护数据不被外部访问 继承 对父类功能的扩展 多态 一个对象的多种形态 类和对象 类是对某一类事物的具有相同特征的抽象，是对象的模板。 对象是类</description>
+    </item>
+    
+    <item>
+      <title>我在Linux上的常用软件（长期更新）</title>
+      <link>https://nopshore.top/posts/%E6%88%91%E5%9C%A8linux%E4%B8%8A%E7%9A%84%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E9%95%BF%E6%9C%9F%E6%9B%B4%E6%96%B0/</link>
+      <pubDate>Thu, 26 Sep 2019 15:16:17 +0800</pubDate>
+      
+      <guid>https://nopshore.top/posts/%E6%88%91%E5%9C%A8linux%E4%B8%8A%E7%9A%84%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E9%95%BF%E6%9C%9F%E6%9B%B4%E6%96%B0/</guid>
+      <description>系统：ArchLinux (Arch死忠粉一枚) 桌面环境：KDE(plasma) 音乐： netease-cloud-music (网易云音乐) Listen1 (集成了网易云、虾米、QQ音乐、酷狗等各大平台的</description>
+    </item>
+    
+    <item>
+      <title>解决proxychains不支持yay的问题</title>
+      <link>https://nopshore.top/posts/%E8%A7%A3%E5%86%B3proxychains%E4%B8%8D%E6%94%AF%E6%8C%81yay%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Thu, 26 Sep 2019 15:16:17 +0800</pubDate>
+      
+      <guid>https://nopshore.top/posts/%E8%A7%A3%E5%86%B3proxychains%E4%B8%8D%E6%94%AF%E6%8C%81yay%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+      <description>问题如下： $ proxychains yay -S petal [proxychains] config file found: /etc/proxychains.conf [proxychains] preloading /usr/lib/libproxychains4.so [proxychains] DLL init: proxychains-ng 4.14 Get https://aur.archlinux.org/rpc.php?arg%5B%5D=petal&amp;amp;type=info&amp;amp;v=5: dial tcp 224.0.0.1:443: connect: network is unreachable 解决方法： 修改proxychains配置文件，把proxy_dns注释掉。 打开prox</description>
+    </item>
+    
+    <item>
+      <title>在Linux上使用VIPER4音效</title>
+      <link>https://nopshore.top/posts/%E5%9C%A8linux%E4%B8%8A%E4%BD%BF%E7%94%A8viper4%E9%9F%B3%E6%95%88/</link>
+      <pubDate>Thu, 12 Sep 2019 15:35:19 +0800</pubDate>
+      
+      <guid>https://nopshore.top/posts/%E5%9C%A8linux%E4%B8%8A%E4%BD%BF%E7%94%A8viper4%E9%9F%B3%E6%95%88/</guid>
+      <description>VIPER4音效是什么？ 摘自百度百科：VIPER4Android ViPER4Android XHiFi 是一款用于Android系统的全局音效驱动，主要用于还原音频中原有的声音细节，包括</description>
+    </item>
+    
+    <item>
+      <title>C语言冒泡排序算法</title>
+      <link>https://nopshore.top/posts/c%E8%AF%AD%E8%A8%80%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Mon, 26 Aug 2019 20:52:48 +0800</pubDate>
+      
+      <guid>https://nopshore.top/posts/c%E8%AF%AD%E8%A8%80%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</guid>
+      <description>冒泡排序基本思想 不断比较数组中相邻的两个元素，让两个元素中较大的元素后移，经过一轮比较后，数值中最大的元素将会移动到数组末尾位置，第二轮将数组第二大的</description>
+    </item>
+    
+    <item>
+      <title>C语言的复杂声明</title>
+      <link>https://nopshore.top/posts/c%E8%AF%AD%E8%A8%80%E7%9A%84%E5%A4%8D%E6%9D%82%E5%A3%B0%E6%98%8E/</link>
+      <pubDate>Fri, 09 Aug 2019 15:33:26 +0800</pubDate>
+      
+      <guid>https://nopshore.top/posts/c%E8%AF%AD%E8%A8%80%E7%9A%84%E5%A4%8D%E6%9D%82%E5%A3%B0%E6%98%8E/</guid>
+      <description>指针的定义与使用 int i = 5; // 声明一个int类型的变量，把5赋值给它。 int *p; // 声明一个指向int类型的指针 p = &amp;amp;i; // 把i自身的地址赋值给指针*p printf(&amp;quot;%d %p %p %p&amp;quot;,*p,&amp;amp;p,p,&amp;amp;i); 最后的</description>
+    </item>
+    
+  </channel>
+</rss>
