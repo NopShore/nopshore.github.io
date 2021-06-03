@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>无岸的Blog</title>
+<title>原理 | 无岸的Blog</title>
 
 <meta name="generator" content="Hugo Eureka 0.8.0" />
 <link rel="stylesheet" href="https://nopshore.top/css/eureka.min.css">
@@ -59,17 +59,52 @@
 
 <meta name="description"
   content="Eureka is a elegant and powerful theme for Hugo.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"分类",
+      "item":"https://nopshore.top/categories/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"原理",
+      "item":"https://nopshore.top/categories/%E5%8E%9F%E7%90%86/"}]
+}
+</script>
 
 
 
-<meta property="og:title" content="无岸的Blog" />
+
+<script type="application/ld+json">
+{
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "itemListElement":[{
+            "@type":"ListItem",
+            "position":  1 ,
+            "name": "二进制、八进制、十进制、十六进制间的转换",
+            "description": "本文主要解释各个进制之间的转换。",
+            "url": "https://nopshore.top/posts/%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%85%AB%E8%BF%9B%E5%88%B6%E5%8D%81%E8%BF%9B%E5%88%B6%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2/"
+        },{
+            "@type":"ListItem",
+            "position":  2 ,
+            "name": "二进制的原码、反码与补码",
+            "description": "本文章主要解释何为原码、反码、补码",
+            "url": "https://nopshore.top/posts/%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%9A%84%E5%8E%9F%E7%A0%81%E5%8F%8D%E7%A0%81%E4%B8%8E%E8%A1%A5%E7%A0%81/"
+        }
+    ]
+}
+</script><meta property="og:title" content="原理 | 无岸的Blog" />
 <meta property="og:type" content="website" />
 
 
 <meta property="og:image" content="https://nopshore.top/images/icon.png">
 
 
-<meta property="og:url" content="https://nopshore.top/authors/" />
+<meta property="og:url" content="https://nopshore.top/categories/%E5%8E%9F%E7%90%86/" />
 
 
 
@@ -97,10 +132,10 @@
 
 
 
-<meta property="article:section" content="authors" />
+<meta property="article:section" content="categories" />
 
 
-<link rel="alternate" type="application/rss+xml" href="https://nopshore.top/authors/index.xml" title="无岸的Blog" />
+<link rel="alternate" type="application/rss+xml" href="https://nopshore.top/categories/%E5%8E%9F%E7%90%86/index.xml" title="无岸的Blog" />
 
 <body class="flex flex-col min-h-screen">
   <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
@@ -122,7 +157,7 @@
             <a href="/authors/nopshore-author/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">关于</a>
             <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">文章</a>
             <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">文档</a>
-            <a href="/categories/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">分类</a>
+            <a href="/categories/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">分类</a>
             <a href="/tags/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">标签</a>
         </div>
 
@@ -175,16 +210,97 @@
     <div class="pl-scrollbar">
       <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
 <article class="mx-6 my-8">
-    <h1 class="font-bold text-3xl text-primary-text">Authors</h1>
+    <h1 class="font-bold text-3xl text-primary-text">原理</h1>
     
 </article>
-<div class="bg-secondary-bg rounded px-6 py-8">
+<div class="bg-secondary-bg rounded px-6">
+    <div class="overflow-hidden divide-y">
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://nopshore.top/posts/%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%85%AB%E8%BF%9B%E5%88%B6%E5%8D%81%E8%BF%9B%E5%88%B6%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2/" class="font-bold text-xl hover:text-eureka">二进制、八进制、十进制、十六进制间的转换</a>
+</div>
+<div class="content">
+  二进制与十进制之间的转换 1. 二进制转十进制 二进制从最低位到高位表示的十进制数值是1、2、4、8、16、32&amp;hellip;的规律延申下去的，及$$1^0
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-06-03</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
     
-    <h2 class="text-lg text-primary-text my-2">
-        <a href="https://nopshore.top/authors/nopshore-author/" class="text-eureka hover:underline">无岸</a>
-    </h2>
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://nopshore.top/categories/%E5%8E%9F%E7%90%86/" class="hover:text-eureka">原理</a>
+        
+    </div>
+    
+
     
 </div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="https://nopshore.top/posts/%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%9A%84%E5%8E%9F%E7%A0%81%E5%8F%8D%E7%A0%81%E4%B8%8E%E8%A1%A5%E7%A0%81/" class="font-bold text-xl hover:text-eureka">二进制的原码、反码与补码</a>
+</div>
+<div class="content">
+  计算机中正数和负数如何表示？ 在计算机中，所有的数据均以二进制数值的方式存储。以符号位区分正负数，符号位为0表示是整数。为1表示是负数。 原码 原码及符号位
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-06-03</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://nopshore.top/categories/%E5%8E%9F%E7%90%86/" class="hover:text-eureka">原理</a>
+        
+    </div>
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+</div>
+
+
+</div>
+
+
+
 
       </div>
     </div>

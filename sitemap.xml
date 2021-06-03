@@ -2,31 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://nopshore.top/tags/archlinux/</loc>
-    <lastmod>2021-06-02T09:06:51+08:00</lastmod>
-  </url><url>
     <loc>https://nopshore.top/authors/</loc>
+    <lastmod>2021-06-03T22:52:13+08:00</lastmod>
+  </url><url>
+    <loc>https://nopshore.top/posts/%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%85%AB%E8%BF%9B%E5%88%B6%E5%8D%81%E8%BF%9B%E5%88%B6%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2/</loc>
+    <lastmod>2021-06-03T22:52:13+08:00</lastmod>
+  </url><url>
+    <loc>https://nopshore.top/categories/</loc>
+    <lastmod>2021-06-03T22:52:13+08:00</lastmod>
+  </url><url>
+    <loc>https://nopshore.top/tags/%E5%8E%9F%E7%90%86/</loc>
+    <lastmod>2021-06-03T22:52:13+08:00</lastmod>
+  </url><url>
+    <loc>https://nopshore.top/categories/%E5%8E%9F%E7%90%86/</loc>
+    <lastmod>2021-06-03T22:52:13+08:00</lastmod>
+  </url><url>
+    <loc>https://nopshore.top/posts/</loc>
+    <lastmod>2021-06-03T22:52:13+08:00</lastmod>
+  </url><url>
+    <loc>https://nopshore.top/authors/nopshore-author/</loc>
+    <lastmod>2021-06-03T22:52:13+08:00</lastmod>
+  </url><url>
+    <loc>https://nopshore.top/</loc>
+    <lastmod>2021-06-03T22:52:13+08:00</lastmod>
+  </url><url>
+    <loc>https://nopshore.top/tags/</loc>
+    <lastmod>2021-06-03T22:52:13+08:00</lastmod>
+  </url><url>
+    <loc>https://nopshore.top/tags/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/</loc>
+    <lastmod>2021-06-03T22:52:13+08:00</lastmod>
+  </url><url>
+    <loc>https://nopshore.top/posts/%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%9A%84%E5%8E%9F%E7%A0%81%E5%8F%8D%E7%A0%81%E4%B8%8E%E8%A1%A5%E7%A0%81/</loc>
+    <lastmod>2021-06-03T22:35:50+08:00</lastmod>
+  </url><url>
+    <loc>https://nopshore.top/tags/archlinux/</loc>
     <lastmod>2021-06-02T09:06:51+08:00</lastmod>
   </url><url>
     <loc>https://nopshore.top/tags/chrome/</loc>
     <lastmod>2021-06-02T09:06:51+08:00</lastmod>
   </url><url>
     <loc>https://nopshore.top/tags/linux/</loc>
-    <lastmod>2021-06-02T09:06:51+08:00</lastmod>
-  </url><url>
-    <loc>https://nopshore.top/categories/</loc>
-    <lastmod>2021-06-02T09:06:51+08:00</lastmod>
-  </url><url>
-    <loc>https://nopshore.top/posts/</loc>
-    <lastmod>2021-06-02T09:06:51+08:00</lastmod>
-  </url><url>
-    <loc>https://nopshore.top/authors/nopshore-author/</loc>
-    <lastmod>2021-06-02T09:06:51+08:00</lastmod>
-  </url><url>
-    <loc>https://nopshore.top/</loc>
-    <lastmod>2021-06-02T09:06:51+08:00</lastmod>
-  </url><url>
-    <loc>https://nopshore.top/tags/</loc>
     <lastmod>2021-06-02T09:06:51+08:00</lastmod>
   </url><url>
     <loc>https://nopshore.top/posts/%E8%A7%A3%E5%86%B3%E5%9C%A8archlinux%E4%B8%8Achrome%E9%A1%B5%E9%9D%A2%E6%BB%9A%E5%8A%A8%E6%8E%89%E5%B8%A7%E7%9A%84%E9%97%AE%E9%A2%98%E5%BC%80%E5%90%AF%E5%B9%B3%E6%BB%91%E6%BB%9A%E5%8A%A8/</loc>

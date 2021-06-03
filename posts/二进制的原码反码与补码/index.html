@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>解决在ArchLinux上Chrome页面滚动掉帧的问题（开启平滑滚动） | 无岸的Blog</title>
+<title>二进制的原码、反码与补码 | 无岸的Blog</title>
 
 <meta name="generator" content="Hugo Eureka 0.8.0" />
 <link rel="stylesheet" href="https://nopshore.top/css/eureka.min.css">
@@ -58,7 +58,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://nopshore.top/images/icon_hu82a47dd308082b5625d3422584f28239_9342_180x180_fill_box_center_2.png">
 
 <meta name="description"
-  content="解决在ArchLinux上Chrome页面滚动掉帧的问题（开启平滑滚动）">
+  content="本文章主要解释何为原码、反码、补码">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -70,8 +70,8 @@
       "item":"https://nopshore.top/posts/"},{
       "@type": "ListItem",
       "position": 2 ,
-      "name":"解决在ArchLinux上Chrome页面滚动掉帧的问题（开启平滑滚动）",
-      "item":"https://nopshore.top/posts/%E8%A7%A3%E5%86%B3%E5%9C%A8archlinux%E4%B8%8Achrome%E9%A1%B5%E9%9D%A2%E6%BB%9A%E5%8A%A8%E6%8E%89%E5%B8%A7%E7%9A%84%E9%97%AE%E9%A2%98%E5%BC%80%E5%90%AF%E5%B9%B3%E6%BB%91%E6%BB%9A%E5%8A%A8/"}]
+      "name":"二进制的原码、反码与补码",
+      "item":"https://nopshore.top/posts/%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%9A%84%E5%8E%9F%E7%A0%81%E5%8F%8D%E7%A0%81%E4%B8%8E%E8%A1%A5%E7%A0%81/"}]
 }
 </script>
 
@@ -83,11 +83,11 @@
     "@type": "Article",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://nopshore.top/posts/%E8%A7%A3%E5%86%B3%E5%9C%A8archlinux%E4%B8%8Achrome%E9%A1%B5%E9%9D%A2%E6%BB%9A%E5%8A%A8%E6%8E%89%E5%B8%A7%E7%9A%84%E9%97%AE%E9%A2%98%E5%BC%80%E5%90%AF%E5%B9%B3%E6%BB%91%E6%BB%9A%E5%8A%A8/"
+        "@id": "https://nopshore.top/posts/%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%9A%84%E5%8E%9F%E7%A0%81%E5%8F%8D%E7%A0%81%E4%B8%8E%E8%A1%A5%E7%A0%81/"
     },
-    "headline": "解决在ArchLinux上Chrome页面滚动掉帧的问题（开启平滑滚动） | 无岸的Blog","datePublished": "2019-12-27T20:58:34+08:00",
-    "dateModified": "2021-06-02T09:06:51+08:00",
-    "wordCount":  173 ,
+    "headline": "二进制的原码、反码与补码 | 无岸的Blog","datePublished": "2021-06-03T22:35:50+08:00",
+    "dateModified": "2021-06-03T22:35:50+08:00",
+    "wordCount":  351 ,
     "author": {
         "@type": "Person",
         "name": "nopshore-author"
@@ -100,20 +100,20 @@
             "url": "https://nopshore.top/images/icon.png"
         }
         },
-    "description": "解决在ArchLinux上Chrome页面滚动掉帧的问题（开启平滑滚动）"
+    "description": "本文章主要解释何为原码、反码、补码"
 }
-</script><meta property="og:title" content="解决在ArchLinux上Chrome页面滚动掉帧的问题（开启平滑滚动） | 无岸的Blog" />
+</script><meta property="og:title" content="二进制的原码、反码与补码 | 无岸的Blog" />
 <meta property="og:type" content="article" />
 
 
 <meta property="og:image" content="https://nopshore.top/images/icon.png">
 
 
-<meta property="og:url" content="https://nopshore.top/posts/%E8%A7%A3%E5%86%B3%E5%9C%A8archlinux%E4%B8%8Achrome%E9%A1%B5%E9%9D%A2%E6%BB%9A%E5%8A%A8%E6%8E%89%E5%B8%A7%E7%9A%84%E9%97%AE%E9%A2%98%E5%BC%80%E5%90%AF%E5%B9%B3%E6%BB%91%E6%BB%9A%E5%8A%A8/" />
+<meta property="og:url" content="https://nopshore.top/posts/%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%9A%84%E5%8E%9F%E7%A0%81%E5%8F%8D%E7%A0%81%E4%B8%8E%E8%A1%A5%E7%A0%81/" />
 
 
 
-<meta property="og:description" content="解决在ArchLinux上Chrome页面滚动掉帧的问题（开启平滑滚动）" />
+<meta property="og:description" content="本文章主要解释何为原码、反码、补码" />
 
 
 
@@ -129,31 +129,19 @@
 
 
 
-<meta property="article:published_time" content="2019-12-27T20:58:34&#43;08:00" />
+<meta property="article:published_time" content="2021-06-03T22:35:50&#43;08:00" />
 
 
-<meta property="article:modified_time" content="2021-06-02T09:06:51&#43;08:00" />
+<meta property="article:modified_time" content="2021-06-03T22:35:50&#43;08:00" />
 
 
 
 <meta property="article:section" content="posts" />
 
 
-<meta property="article:tag" content="Linux" />
-
-<meta property="article:tag" content="Archlinux" />
-
-<meta property="article:tag" content="Chrome" />
+<meta property="article:tag" content="原理" />
 
 
-
-
-
-<meta property="og:see_also" content="https://nopshore.top/posts/%E6%88%91%E5%9C%A8linux%E4%B8%8A%E7%9A%84%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E9%95%BF%E6%9C%9F%E6%9B%B4%E6%96%B0/" />
-
-<meta property="og:see_also" content="https://nopshore.top/posts/%E8%A7%A3%E5%86%B3proxychains%E4%B8%8D%E6%94%AF%E6%8C%81yay%E7%9A%84%E9%97%AE%E9%A2%98/" />
-
-<meta property="og:see_also" content="https://nopshore.top/posts/%E5%9C%A8linux%E4%B8%8A%E4%BD%BF%E7%94%A8viper4%E9%9F%B3%E6%95%88/" />
 
 
 
@@ -234,11 +222,11 @@
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
     <div
         class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
-        <h1 class="font-bold text-3xl text-primary-text">解决在ArchLinux上Chrome页面滚动掉帧的问题（开启平滑滚动）</h1>
+        <h1 class="font-bold text-3xl text-primary-text">二进制的原码、反码与补码</h1>
         <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
-        <span>2019-12-27</span>
+        <span>2021-06-03</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
@@ -249,7 +237,7 @@
     <div class="mr-6 my-2">
         <i class="fas fa-folder mr-1"></i>
         
-        <a href="https://nopshore.top/categories/%E8%BD%AF%E4%BB%B6%E7%9B%B8%E5%85%B3/" class="hover:text-eureka">软件相关</a>
+        <a href="https://nopshore.top/categories/%E5%8E%9F%E7%90%86/" class="hover:text-eureka">原理</a>
         
     </div>
     
@@ -261,35 +249,39 @@
         
 
         <div class="content">
-            <h3 id="解决方法">解决方法</h3>
-<p>1.chrome地址栏输入：<a href="chrome://flags/#smooth-scrolling">chrome://flags/#smooth-scrolling</a></p>
-<p>2.第一项 <strong><em>Smooth Scrolling</em></strong> 选项选择 <strong><em>Disabled</em></strong></p>
-<p>3.点击右下脚 <strong><em>relaunch now</em></strong> 重启</p>
-<p>4.安装chrome插件 <strong>smoothscroll</strong> ：<a href="https://chrome.google.com/webstore/detail/smoothscroll/nbokbjkabcmbfdlbddjidfmibcpneigj">smoothscroll</a></p>
-<p>5.设置 <strong>smoothscroll</strong></p>
-<p>load profile 选择 <strong>custom</strong></p>
-<p>Step size [px] 设置 　　　　　　　　<strong><code>50</code></strong></p>
-<p>Animation time [ms] 设置 　　　　　<strong><code>260</code></strong></p>
-<p>Acceleration scale 设置 　　　　　　<strong><code>3</code></strong></p>
-<p>Acceleration delta [ms] 设置 　　　　<strong><code>50</code></strong></p>
-<p>Pulse Scale 设置 　　　　　　　　　<strong><code>6</code></strong></p>
-<p>Arrow key step size [px] 设置 　　　<strong><code>50</code></strong></p>
-<p>勾选下列选项：</p>
-<p><strong>☑ Enable keyboard support</strong></p>
-<p><strong>☑ Enable touchpad support</strong></p>
-<p><strong>☑ Enable pulse algorithm</strong></p>
-<p><strong>☑ Enable middle mouse scrolling</strong></p>
-<p><strong>☑ Enable fixed backgrounds</strong></p>
+            <h2 id="计算机中正数和负数如何表示">计算机中正数和负数如何表示？</h2>
+<p>在计算机中，所有的数据均以二进制数值的方式存储。以符号位区分正负数，符号位为0表示是整数。为1表示是负数。</p>
+<h2 id="原码">原码</h2>
+<p>原码及符号位加数值，正数的原码都是其本身。负数的原码符号位是1，其他各位与其绝对值一致。
+以8bit为例：</p>
+<pre><code>[+1]原码:0000 0001
+[ -1]原码:1000 0001
+</code></pre>
+<h2 id="反码">反码</h2>
+<p>正数的反码是其本身，负数的反码则除符号位外，数值部分全部取反。<br>
+8bit为例：</p>
+<pre><code>[+1]反码:0000 0001
+[ -1]反码:1111 1110
+</code></pre>
+<h2 id="补码">补码</h2>
+<p>正数的补码是其本身，负数的补码是在其反码的基础上+1得来的。<br>
+8bit为例：</p>
+<pre><code>[+1]补码:0000 0001 
+[ -1]补码:1111 1111
+</code></pre>
+<h2 id="总结">总结</h2>
+<ol>
+<li>正数的反码和补码都与原码一致。</li>
+<li>负数的反码是原码除符号位外其他部分取反。</li>
+<li>负数的补码是在反码的基础上加1。</li>
+<li>正数0和负数0的补码相同，<code>[+0]0000 0000 == [-1]1000 0000</code> 。</li>
+</ol>
 
         </div>
         
         <div class="my-4">
     
-    <a href="https://nopshore.top/tags/linux/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#linux</a>
-    
-    <a href="https://nopshore.top/tags/archlinux/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Archlinux</a>
-    
-    <a href="https://nopshore.top/tags/chrome/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Chrome</a>
+    <a href="https://nopshore.top/tags/%E5%8E%9F%E7%90%86/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#原理</a>
     
 </div>
         
@@ -355,13 +347,13 @@
     <div>
         
         <span class="block font-bold">上一页</span>
-        <a href="https://nopshore.top/posts/%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%9A%84%E5%8E%9F%E7%A0%81%E5%8F%8D%E7%A0%81%E4%B8%8E%E8%A1%A5%E7%A0%81/" class="block">二进制的原码、反码与补码</a>
+        <a href="https://nopshore.top/posts/%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%85%AB%E8%BF%9B%E5%88%B6%E5%8D%81%E8%BF%9B%E5%88%B6%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2/" class="block">二进制、八进制、十进制、十六进制间的转换</a>
         
     </div>
     <div class="md:text-right mt-4 md:mt-0">
         
         <span class="block font-bold">下一页</span>
-        <a href="https://nopshore.top/posts/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A6%82%E8%BF%B0%E4%BA%8C%E5%B0%81%E8%A3%85/" class="block">Java面向对象概述（二）：封装</a>
+        <a href="https://nopshore.top/posts/%E8%A7%A3%E5%86%B3%E5%9C%A8archlinux%E4%B8%8Achrome%E9%A1%B5%E9%9D%A2%E6%BB%9A%E5%8A%A8%E6%8E%89%E5%B8%A7%E7%9A%84%E9%97%AE%E9%A2%98%E5%BC%80%E5%90%AF%E5%B9%B3%E6%BB%91%E6%BB%9A%E5%8A%A8/" class="block">解决在ArchLinux上Chrome页面滚动掉帧的问题（开启平滑滚动）</a>
         
     </div>
 </div>
@@ -394,11 +386,11 @@
 <div class="sticky-toc hidden lg:block px-6 pb-6 ">
     <nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li><a href="#解决方法">解决方法</a></li>
-      </ul>
-    </li>
+    <li><a href="#计算机中正数和负数如何表示">计算机中正数和负数如何表示？</a></li>
+    <li><a href="#原码">原码</a></li>
+    <li><a href="#反码">反码</a></li>
+    <li><a href="#补码">补码</a></li>
+    <li><a href="#总结">总结</a></li>
   </ul>
 </nav>
 </div>
@@ -412,23 +404,6 @@
     
 
     
-    
-    <div
-        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded p-6">
-        <h2 class="text-lg font-semibold mb-4">相关</h2>
-        <div class="content">
-            
-            <a href="https://nopshore.top/posts/%E6%88%91%E5%9C%A8linux%E4%B8%8A%E7%9A%84%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E9%95%BF%E6%9C%9F%E6%9B%B4%E6%96%B0/">我在Linux上的常用软件（长期更新）</a>
-            <br />
-            
-            <a href="https://nopshore.top/posts/%E8%A7%A3%E5%86%B3proxychains%E4%B8%8D%E6%94%AF%E6%8C%81yay%E7%9A%84%E9%97%AE%E9%A2%98/">解决proxychains不支持yay的问题</a>
-            <br />
-            
-            <a href="https://nopshore.top/posts/%E5%9C%A8linux%E4%B8%8A%E4%BD%BF%E7%94%A8viper4%E9%9F%B3%E6%95%88/">在Linux上使用VIPER4音效</a>
-            <br />
-            
-        </div>
-    </div>
     
 </div>
 <script>
