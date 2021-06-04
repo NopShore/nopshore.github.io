@@ -6,16 +6,16 @@
     <description>Recent content in 无岸 on 无岸的Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <copyright>&amp;copy; 2019-2021 &lt;a href=&#34;https://nopshore.top&#34;&gt;无岸的blog&lt;/a&gt;
+    <copyright>&amp;copy; 2019 - 2021 &lt;a href=&#34;https://nopshore.top&#34;&gt;无岸&lt;/a&gt;
 </copyright>
-    <lastBuildDate>Thu, 03 Jun 2021 22:52:13 +0800</lastBuildDate><atom:link href="https://nopshore.top/authors/nopshore-author/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Jun 2021 22:52:13 +0800</lastBuildDate><atom:link href="https://nopshore.top/authors/nopshore-author/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>二进制、八进制、十进制、十六进制间的转换</title>
       <link>https://nopshore.top/posts/%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%85%AB%E8%BF%9B%E5%88%B6%E5%8D%81%E8%BF%9B%E5%88%B6%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2/</link>
-      <pubDate>Thu, 03 Jun 2021 22:52:13 +0800</pubDate>
+      <pubDate>Fri, 04 Jun 2021 22:52:13 +0800</pubDate>
       
       <guid>https://nopshore.top/posts/%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%85%AB%E8%BF%9B%E5%88%B6%E5%8D%81%E8%BF%9B%E5%88%B6%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2/</guid>
-      <description>二进制与十进制之间的转换 1. 二进制转十进制 二进制从最低位到高位表示的十进制数值是1、2、4、8、16、32&amp;hellip;的规律延申下去的，及$$1^0</description>
+      <description>二进制与十进制之间的转换 1. 二进制转十进制 二进制从最低位到高位表示的十进制数值是1、2、4、8、16、32&amp;hellip;的规律延申下去的，及$1^0、</description>
     </item>
     
     <item>
@@ -24,7 +24,7 @@
       <pubDate>Thu, 03 Jun 2021 22:35:50 +0800</pubDate>
       
       <guid>https://nopshore.top/posts/%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%9A%84%E5%8E%9F%E7%A0%81%E5%8F%8D%E7%A0%81%E4%B8%8E%E8%A1%A5%E7%A0%81/</guid>
-      <description>计算机中正数和负数如何表示？ 在计算机中，所有的数据均以二进制数值的方式存储。以符号位区分正负数，符号位为0表示是整数。为1表示是负数。 原码 原码及符号位</description>
+      <description>计算机中正数和负数如何表示？ 在计算机中，所有的数据均以二进制数值的方式存储。以符号位区分正负数，符号位为0表示是整数。为1表示是负数。 原码 正数的原码就</description>
     </item>
     
     <item>

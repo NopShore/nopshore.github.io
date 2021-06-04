@@ -85,9 +85,9 @@
         "@type": "WebPage",
         "@id": "https://nopshore.top/posts/%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%85%AB%E8%BF%9B%E5%88%B6%E5%8D%81%E8%BF%9B%E5%88%B6%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2/"
     },
-    "headline": "二进制、八进制、十进制、十六进制间的转换 | 无岸的Blog","datePublished": "2021-06-03T22:52:13+08:00",
-    "dateModified": "2021-06-03T22:52:13+08:00",
-    "wordCount":  295 ,
+    "headline": "二进制、八进制、十进制、十六进制间的转换 | 无岸的Blog","datePublished": "2021-06-04T22:52:13+08:00",
+    "dateModified": "2021-06-04T22:52:13+08:00",
+    "wordCount":  1629 ,
     "author": {
         "@type": "Person",
         "name": "nopshore-author"
@@ -129,10 +129,10 @@
 
 
 
-<meta property="article:published_time" content="2021-06-03T22:52:13&#43;08:00" />
+<meta property="article:published_time" content="2021-06-04T22:52:13&#43;08:00" />
 
 
-<meta property="article:modified_time" content="2021-06-03T22:52:13&#43;08:00" />
+<meta property="article:modified_time" content="2021-06-04T22:52:13&#43;08:00" />
 
 
 
@@ -232,11 +232,11 @@
         <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
-        <span>2021-06-03</span>
+        <span>2021-06-04</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
-        <span>1分钟阅读时长</span>
+        <span>4分钟阅读时长</span>
     </div>
     
     
@@ -257,16 +257,56 @@
         <div class="content">
             <h2 id="二进制与十进制之间的转换">二进制与十进制之间的转换</h2>
 <h3 id="1-二进制转十进制">1. 二进制转十进制</h3>
-<p>二进制从最低位到高位表示的十进制数值是1、2、4、8、16、32&hellip;的规律延申下去的，及$$1^0、1^1、1^2、1^3、1^4、1^5&hellip;$$<br>
-举例二进制的<code>0101 0111</code>转换成十进制：</p>
+<p>二进制从最低位到高位表示的十进制数值是1、2、4、8、16、32&hellip;的规律延申下去的，及$1^0、1^1、1^2、1^3、1^4、1^5&hellip;$<br>
+举例将二进制的<code>0101 0111</code>转换成十进制：</p>
 <ul>
-<li>最低位1的零次方是<code>1</code>，低第二位1的1次方是<code>2</code>，第三位1的2次方是<code>4</code>，第四位0的3次方是<code>0</code>，第五位1的4次方是<code>16</code>，第六位0的5次方是<code>0</code>，第七位1的6次方是<code>64</code>，第八位0的7次方是<code>0</code>。</li>
+<li>最低位1的0次方是<code>1</code>，低第二位1的1次方是<code>2</code>，第三位1的2次方是<code>4</code>，第四位0的3次方是<code>0</code>，第五位1的4次方是<code>16</code>，第六位0的5次方是<code>0</code>，第七位1的6次方是<code>64</code>，第八位0的7次方是<code>0</code>。</li>
 <li>然后全部加起来<code>1+2+4+0+16+0+64+0=87</code></li>
 </ul>
 <h3 id="2-十进制转二进制">2. 十进制转二进制</h3>
-<h1 id="1点半了要睡觉了有时间在写完">1点半了，要睡觉了😭，有时间在写完。</h1>
+<p>把十进制数除以2取余，得到商后再除以2再取余，直到得到的商为0为止。从下到上（从右到左）倒取余数，就是对应的二进制数。<br>
+举例将十进制的<code>87</code>转换为二进制：</p>
+<ul>
+<li>87除以2商43余<code>1</code>，43除以2商21余<code>1</code>，21除以2商10余<code>1</code>，10除以2商5余<code>0</code>，5除以2商2余<code>1</code>，2除以2商1余<code>0</code>，1除以2商0余<code>1</code>。</li>
+<li>倒取余数得到<code>101 0111</code>就是十进制数转换后的二进制数了。</li>
+</ul>
 <h2 id="二进制与十六进制之间的转换">二进制与十六进制之间的转换</h2>
+<h3 id="1-二进制数转十六进制">1. 二进制数转十六进制</h3>
+<p>十六进制是一种逢16进1的进位制，用数字0~9和字母a~f表示0~15。在十六进制中，十进制的10用a表示，11用b表示，12用c表示，13用d表示，14用e表示，15用f表示。<br>
+十六进制数转换成二进制数的方法，以二进制数<code>0101 0111</code>举例：</p>
+<ul>
+<li>将二进制数拆分为4位一组，二进制数<code>0101 0111</code>可以拆分为<code>0101</code>和<code>0111</code>两组。</li>
+<li>把上一步拆分的第一组<code>0101</code>转换成十进制得到<code>5</code>，再把第二组<code>0111</code>转换成十进制得到<code>7</code>，拼接起来得到的<code>57</code>就是二进制 0101 0111 对应的十六进制数了。</li>
+</ul>
+<h3 id="2-十六进制转二进制">2. 十六进制转二进制</h3>
+<p>十六进制数转二进制可以用上一小节二进制转十六进制所使用的方法以逆向顺序实现。<br>
+还是以上一小节的十六进制数<code>57</code>举例：</p>
+<ul>
+<li>将十六进制的每一位拆分，<code>57</code>可以拆分为<code>5</code>和<code>7</code>。把5做为十进制转换为二进制得到<code>101</code>,十六进制数一位需要四位二进制数组合，于是在 101 前补0，得到<code>0101</code>。接下来将7做为十进制转换为二进制得到<code>111</code>，同理，在 111 前补0得到<code>0111</code>。</li>
+<li>再将上述步骤得到的<code>0101</code>和<code>0111</code>拼接起来，得到的数<code>0101 0111</code>就是二进制了</li>
+</ul>
 <h2 id="二进制与八进制之间的转换">二进制与八进制之间的转换</h2>
+<h3 id="1-二进制转八进制">1. 二进制转八进制</h3>
+<p>二进制转八进制的方法与上面所说的二进制转十六进制方法类似，都是将二进制数拆分为一组或多组，然后一组一组转换再拼接得到结果。区别在于二进制转十六进制是将4位二进制数为一组，而二进制转八进制是以3位为一组。<br>
+还是以<code>0101 0111</code>举例：</p>
+<ul>
+<li>将<code>0101 0111</code>拆分为3位一组，不满3位则补0，得到<code>001</code>、<code>010</code>和<code>111</code>。001 转换为十进制是<code>1</code>， 010 转换为十进制是<code>2</code>， 111转换为十进制是<code>7</code>。</li>
+<li>再将<code>1</code>、<code>2</code>和<code>7</code>拼接起来得到<code>127</code>就是二进制 0101 0111 转换为八进制得到的数了。</li>
+</ul>
+<h3 id="2-八进制转二进制">2. 八进制转二进制</h3>
+<p>八进制转二进制同十六进制转二进制的方法类似，以二进制转八进制所使用的方法以逆向顺序实现。<br>
+以八进制数<code>127</code>举例：</p>
+<ul>
+<li>将八进制数 127 每位拆开，得到<code>1</code>、<code>2</code>和<code>7</code>。再将每一位做为十进制转换成二进制， 1 转换为二进制得到<code>001</code>， 2 转换为二进制得到<code>010</code>， 7 转换为二进制得到<code>111</code>。</li>
+<li>将<code>001</code>、<code>010</code>和<code>111</code>拼接起来得到<code>0 0101 0111</code>，这就是八进制转二进制的方法了。</li>
+</ul>
+<h2 id="总结">总结</h2>
+<ol>
+<li>二进制转十进制就是把二进制数从低位开始，从最低位指数0，每高一位指数加1，将二进制数每一位数和对应的指数计算出来得到的结果再相加。</li>
+<li>十进制转二进制就是把十进制数除以2取余，得到商后再除以2再取余，直到得到的商为0为止，再将得到的所有余数逆顺序排列拼接起来。</li>
+<li>二进制转八进制和二进制转十六进制的方法相似，都是将二进制分组，再计算每一组的十进制数然后拼接起来，区别在于十六进制是以4位二进制数为一组，八进制是以3位二进制数为一组。</li>
+<li>八进制转二进制和十六进制转二进制所用的方法也很相似，都是拆分每一位，再将每一位当作十进制转换成二进制然后拼接起来。区别在于转换成二进制后，十六进制是不满4位用0补满，而八进制是不满3位用0补满。</li>
+</ol>
 
         </div>
         
@@ -382,11 +422,19 @@
         <li><a href="#2-十进制转二进制">2. 十进制转二进制</a></li>
       </ul>
     </li>
-  </ul>
-
-  <ul>
-    <li><a href="#二进制与十六进制之间的转换">二进制与十六进制之间的转换</a></li>
-    <li><a href="#二进制与八进制之间的转换">二进制与八进制之间的转换</a></li>
+    <li><a href="#二进制与十六进制之间的转换">二进制与十六进制之间的转换</a>
+      <ul>
+        <li><a href="#1-二进制数转十六进制">1. 二进制数转十六进制</a></li>
+        <li><a href="#2-十六进制转二进制">2. 十六进制转二进制</a></li>
+      </ul>
+    </li>
+    <li><a href="#二进制与八进制之间的转换">二进制与八进制之间的转换</a>
+      <ul>
+        <li><a href="#1-二进制转八进制">1. 二进制转八进制</a></li>
+        <li><a href="#2-八进制转二进制">2. 八进制转二进制</a></li>
+      </ul>
+    </li>
+    <li><a href="#总结">总结</a></li>
   </ul>
 </nav>
 </div>
@@ -425,7 +473,7 @@
   </main>
   <footer class="pl-scrollbar">
     <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
-    <p class="text-sm text-tertiary-text">&copy; 2019-2021 <a href="https://nopshore.top">无岸的blog</a>
+    <p class="text-sm text-tertiary-text">&copy; 2019 - 2021 <a href="https://nopshore.top">无岸</a>
  &middot;  Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
 </div></div>
   </footer>

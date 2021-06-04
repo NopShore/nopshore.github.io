@@ -87,7 +87,7 @@
     },
     "headline": "二进制的原码、反码与补码 | 无岸的Blog","datePublished": "2021-06-03T22:35:50+08:00",
     "dateModified": "2021-06-03T22:35:50+08:00",
-    "wordCount":  351 ,
+    "wordCount":  352 ,
     "author": {
         "@type": "Person",
         "name": "nopshore-author"
@@ -252,7 +252,7 @@
             <h2 id="计算机中正数和负数如何表示">计算机中正数和负数如何表示？</h2>
 <p>在计算机中，所有的数据均以二进制数值的方式存储。以符号位区分正负数，符号位为0表示是整数。为1表示是负数。</p>
 <h2 id="原码">原码</h2>
-<p>原码及符号位加数值，正数的原码都是其本身。负数的原码符号位是1，其他各位与其绝对值一致。
+<p>正数的原码就是其本身。负数的原码符号位是1，其他各位与其绝对值一致。
 以8bit为例：</p>
 <pre><code>[+1]原码:0000 0001
 [ -1]原码:1000 0001
@@ -274,7 +274,7 @@
 <li>正数的反码和补码都与原码一致。</li>
 <li>负数的反码是原码除符号位外其他部分取反。</li>
 <li>负数的补码是在反码的基础上加1。</li>
-<li>正数0和负数0的补码相同，<code>[+0]0000 0000 == [-1]1000 0000</code> 。</li>
+<li>正数0和负数0的补码相同，<code>[+0]原码0000 0000 == [-1]原码1000 0000</code> 。</li>
 </ol>
 
         </div>
@@ -418,7 +418,7 @@
   </main>
   <footer class="pl-scrollbar">
     <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
-    <p class="text-sm text-tertiary-text">&copy; 2019-2021 <a href="https://nopshore.top">无岸的blog</a>
+    <p class="text-sm text-tertiary-text">&copy; 2019 - 2021 <a href="https://nopshore.top">无岸</a>
  &middot;  Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
 </div></div>
   </footer>
