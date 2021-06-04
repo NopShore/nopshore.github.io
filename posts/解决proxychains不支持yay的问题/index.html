@@ -58,7 +58,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://nopshore.top/images/icon_hu82a47dd308082b5625d3422584f28239_9342_180x180_fill_box_center_2.png">
 
 <meta name="description"
-  content="问题如下： $ proxychains yay -S petal [proxychains] config file found: /etc/proxychains.conf [proxychains] preloading /usr/lib/libproxychains4.so [proxychains] DLL init: proxychains-ng 4.14 Get https://aur.archlinux.org/rpc.php?arg%5B%5D=petal&amp;type=info&amp;v=5: dial tcp 224.0.0.1:443: connect: network is unreachable 解决方法： 修改proxychains配置文件，把proxy_dns注释掉。 打开prox">
+  content="问题如下 $ proxychains yay -S petal [proxychains] config file found: /etc/proxychains.conf [proxychains] preloading /usr/lib/libproxychains4.so [proxychains] DLL init: proxychains-ng 4.14 Get https://aur.archlinux.org/rpc.php?arg%5B%5D=petal&amp;type=info&amp;v=5: dial tcp 224.0.0.1:443: connect: network is unreachable 解决方法 修改proxychains配置文件，把proxy_dns注释掉。 打开proxyc">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -87,7 +87,7 @@
     },
     "headline": "解决proxychains不支持yay的问题 | 无岸的Blog","datePublished": "2019-09-26T15:16:17+08:00",
     "dateModified": "2021-06-02T09:06:32+08:00",
-    "wordCount":  137 ,
+    "wordCount":  135 ,
     "author": {
         "@type": "Person",
         "name": "nopshore-author"
@@ -100,7 +100,7 @@
             "url": "https://nopshore.top/images/icon.png"
         }
         },
-    "description": "问题如下： $ proxychains yay -S petal [proxychains] config file found: \/etc\/proxychains.conf [proxychains] preloading \/usr\/lib\/libproxychains4.so [proxychains] DLL init: proxychains-ng 4.14 Get https:\/\/aur.archlinux.org\/rpc.php?arg%5B%5D=petal\u0026amp;type=info\u0026amp;v=5: dial tcp 224.0.0.1:443: connect: network is unreachable 解决方法： 修改proxychains配置文件，把proxy_dns注释掉。 打开prox"
+    "description": "问题如下 $ proxychains yay -S petal [proxychains] config file found: \/etc\/proxychains.conf [proxychains] preloading \/usr\/lib\/libproxychains4.so [proxychains] DLL init: proxychains-ng 4.14 Get https:\/\/aur.archlinux.org\/rpc.php?arg%5B%5D=petal\u0026amp;type=info\u0026amp;v=5: dial tcp 224.0.0.1:443: connect: network is unreachable 解决方法 修改proxychains配置文件，把proxy_dns注释掉。 打开proxyc"
 }
 </script><meta property="og:title" content="解决proxychains不支持yay的问题 | 无岸的Blog" />
 <meta property="og:type" content="article" />
@@ -114,7 +114,7 @@
 
 
 
-<meta property="og:description" content="问题如下： $ proxychains yay -S petal [proxychains] config file found: /etc/proxychains.conf [proxychains] preloading /usr/lib/libproxychains4.so [proxychains] DLL init: proxychains-ng 4.14 Get https://aur.archlinux.org/rpc.php?arg%5B%5D=petal&amp;type=info&amp;v=5: dial tcp 224.0.0.1:443: connect: network is unreachable 解决方法： 修改proxychains配置文件，把proxy_dns注释掉。 打开prox" />
+<meta property="og:description" content="问题如下 $ proxychains yay -S petal [proxychains] config file found: /etc/proxychains.conf [proxychains] preloading /usr/lib/libproxychains4.so [proxychains] DLL init: proxychains-ng 4.14 Get https://aur.archlinux.org/rpc.php?arg%5B%5D=petal&amp;type=info&amp;v=5: dial tcp 224.0.0.1:443: connect: network is unreachable 解决方法 修改proxychains配置文件，把proxy_dns注释掉。 打开proxyc" />
 
 
 
@@ -261,7 +261,7 @@
         
 
         <div class="content">
-            <h3 id="问题如下">问题如下：</h3>
+            <h2 id="问题如下">问题如下</h2>
 <pre><code class="language-bash">$ proxychains yay -S petal
 [proxychains] config file found: /etc/proxychains.conf
 [proxychains] preloading /usr/lib/libproxychains4.so
@@ -269,15 +269,18 @@
 Get https://aur.archlinux.org/rpc.php?arg%5B%5D=petal&amp;type=info&amp;v=5: dial tcp 224.0.0.1:443: connect: network is unreachable
 </code></pre>
 </br>
-<h3 id="解决方法">解决方法：</h3>
+<h2 id="解决方法">解决方法</h2>
 <p>修改proxychains配置文件，把proxy_dns注释掉。</p>
-<p>打开proxychains.conf文件</p>
+<ol>
+<li>打开proxychains.conf文件</li>
+</ol>
 <pre><code class="language-bash">$ sudo vim /etc/proxychains.conf
 </code></pre>
-<p>找到52行的位置，在proxy_dns前加上#号</p>
+<ol start="2">
+<li>找到52行的位置，在proxy_dns前加上#号</li>
+</ol>
 <pre><code class="language-bash">52 # proxy_dns
 </code></pre>
-</br>
 <p><strong>修改完成后就可以愉快的使用yay了</strong></p>
 
         </div>
@@ -393,12 +396,8 @@ Get https://aur.archlinux.org/rpc.php?arg%5B%5D=petal&amp;type=info&amp;v=5: dia
 <div class="sticky-toc hidden lg:block px-6 pb-6 ">
     <nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li><a href="#问题如下">问题如下：</a></li>
-        <li><a href="#解决方法">解决方法：</a></li>
-      </ul>
-    </li>
+    <li><a href="#问题如下">问题如下</a></li>
+    <li><a href="#解决方法">解决方法</a></li>
   </ul>
 </nav>
 </div>

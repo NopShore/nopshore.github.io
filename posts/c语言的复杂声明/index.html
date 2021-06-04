@@ -87,7 +87,7 @@
     },
     "headline": "C语言的复杂声明 | 无岸的Blog","datePublished": "2019-08-09T15:33:26+08:00",
     "dateModified": "2021-06-02T08:53:38+08:00",
-    "wordCount":  1723 ,
+    "wordCount":  1751 ,
     "author": {
         "@type": "Person",
         "name": "nopshore-author"
@@ -253,15 +253,15 @@
         <div class="content">
             <h2 id="指针的定义与使用">指针的定义与使用</h2>
 <pre><code class="language-C">int i = 5; // 声明一个int类型的变量，把5赋值给它。
-int *p; // 声明一个指向int类型的指针
-p = &amp;i; // 把i自身的地址赋值给指针*p
+int *p; // 声明一个指向int类型的指针。
+p = &amp;i; // 把i自身的地址赋值给指针*p。
 printf(&quot;%d %p %p %p&quot;,*p,&amp;p,p,&amp;i);
 </code></pre>
-<p><strong>最后的 printf(&quot;%d %p %p&quot;,*p,p,&amp;i); 解析：</strong></p>
-<p>第一个 <strong>*p</strong> 输出的是5（解引用得到p指向的地址存放的值）。<br>
-第二个 <strong>&amp;p</strong> 输出的是指针p自身的地址。<br>
-第三个 <strong>p</strong> 输出的是指针p指向的地址，p = &amp;i  所以p指向的是i的地址。<br>
-第四个 <strong>&amp;i</strong> 输出的是i自身的地址。</p>
+<p>最后的<code>printf(&quot;%d %p %p&quot;,*p,p,&amp;i); </code>解析：<br>
+第一个 <code>*p</code> 输出的是5（解引用得到p指向的地址存放的值）。<br>
+第二个 <code>&amp;p</code> 输出的是指针p自身的地址。<br>
+第三个 <code>p</code> 输出的是指针p指向的地址，p = &amp;i  所以p指向的是i的地址。<br>
+第四个 <code>&amp;i</code> 输出的是i自身的地址。</p>
 </br>
 <h2 id="多级指针">多级指针</h2>
 <pre><code class="language-C">int i = 2;
@@ -269,13 +269,14 @@ int *p1 = &amp;i;
 int **p2 = &amp;p1; // 声明一个二级指针p2，这个指针指向指针p1自身的地址。
 printf(&quot; %d\n %p\n %p\n %p\n %p\n&quot;,**p2,p2,*p2,p1,&amp;p1);
 </code></pre>
-<p><strong>最后的 printf(&quot; %d\n %p\n %p\n %p\n %p\n&quot;,**p2,p2,*p2,p1,&amp;p1); 输出结果：</strong></p>
-<p>2<br>
-0x7ffee13a2b08<br>
-0x7ffee13a2b04<br>
-0x7ffee13a2b04<br>
-0x7ffee13a2b08<br>
-<strong>解析：</strong><br>
+<p>最后的<code>printf(&quot; %d\n %p\n %p\n %p\n %p\n&quot;,**p2,p2,*p2,p1,&amp;p1); </code>输出结果：</p>
+<pre><code>2  
+0x7ffee13a2b08  
+0x7ffee13a2b04  
+0x7ffee13a2b04  
+0x7ffee13a2b08
+</code></pre>
+<p><strong>解析：</strong><br>
 第一个 <strong>**p2</strong> 输出的是2（双重解引用 p2的值是p1的地址,p1的值是i的地址，i的值为2）。<br>
 第二个 <strong>p2</strong>  输出的是p1自身的地址 （p2指向指针p1的地址）。<br>
 第三个 <strong>*p2</strong> 输出的是i自身的地址 （p2解引用得到p1指向的地址，p1指向i，所以是输出i自身的地址）。<br>
@@ -288,68 +289,55 @@ printf(&quot; %d\n %p\n %p\n %p\n %p\n&quot;,**p2,p2,*p2,p1,&amp;p1);
 <li><strong>指针数组</strong>  元素为指针的数组</li>
 <li><strong>数组指针</strong>  指向数组的指针</li>
 <li><strong>指针函数</strong>  返回值为指针的函数</li>
-<li><strong>函数指针</strong>  指向函数的指针</li>
-</ul>
-<p>优先级规则：</p>
-<ul>
+<li><strong>函数指针</strong>  指向函数的指针
+优先级规则：</li>
 <li><strong>优先级最高的是 声明中括号扩起来的内容</strong></li>
 <li><strong>其次是 后缀操作符 ( ) 、[ ]</strong></li>
 <li><strong>然后是 前缀操作符 *</strong></li>
 </ul>
-</br>
 <h3 id="简单的栗子">简单的栗子：</h3>
 <pre><code class="language-C">int *arr[5]; 
 </code></pre>
 <p>arr先和后面的[ ]结合，说明这是一个数组，再与前面的*结合，说明这个数组里的元素是指针，<br>
-所以这是一个<strong>指针数组</strong>。</p>
-</br>
+所以这是一个 <strong>指针数组</strong>。</p>
 <pre><code class="language-C">int (*p)[5];
 </code></pre>
 <p>先看括号里的内容，p与*结合，说明这是一个指针，再与[ ]结合，说明这个指针指向数组，<br>
-所以这是一个<strong>数组指针</strong>。</p>
-</br>
+所以这是一个 <strong>数组指针</strong>。</p>
 <pre><code class="language-C">int *func(int);
 </code></pre>
 <p>func先于( )结合，说明这是一个函数，函数的参数为int，再与func前面的*结合，说明返回值是一个指针，<br>
-所以这是一个<strong>指针函数</strong>。</p>
-</br>
+所以这是一个 <strong>指针函数</strong>。</p>
 <pre><code class="language-C">int (*p)(int);
 </code></pre>
 <p>先看括号里的内容，p与*结合，说明这是一个指针，再与外面的括号结合，说明这个指针指向一个函数，外面的括号里是int，说明这个函数的参数是int类型的，<br>
-所以这是一个<strong>函数指针</strong>。</p>
-</br>
+所以这是一个 <strong>函数指针</strong>。</p>
 <h3 id="复杂一点">复杂一点：</h3>
 <pre><code class="language-C">int *(*p)[5];
 </code></pre>
 <p>先看括号里的内容，p于<em>结合，说明这是指针，再与[ ]结合，说明这个指针指向数组，再与第一个</em>结合，说明这个数组里的元素是指针。<br>
-所以这是一个<strong>数组指针</strong>，指向的数组的里面的元素应该是int *类型的。</p>
-</br>
+所以这是一个 <strong>数组指针</strong>，指向的数组的里面的元素应该是int *类型的。</p>
 <pre><code class="language-C">int (*arr[5])(int);
 </code></pre>
 <p>先看arr所在的括号里的内容，<em>arr[5]，arr先与[ ]结合，说明这是一个数组，再与</em>结合，说明数组里的元素是指针，再与右边的括号结合，说明这个指针指向函数，这个函数的参数是int类型的。<br>
-所以这是<strong>指针数组</strong>，数组里的指针应该指向函数。</p>
-</br>
+所以这是 <strong>指针数组</strong>，数组里的指针应该指向函数。</p>
 <pre><code class="language-C">int *(*arr[5])[5];
 </code></pre>
 <p>先看arr所在的括号里的内容，<em>arr[5]，arr先与[ ]结合，说明这是一个数组，再与</em>结合，说明数组里的元素是指针，再与右边的[ ]结合，说明这个指针指向数组，再与*结合，说明这个数组存放的元素应该是指针。<br>
-所以这是<strong>指针数组</strong>，数组里的指针指向另一个指针数组。</p>
-</br>
+所以这是 <strong>指针数组</strong>，数组里的指针指向另一个指针数组。</p>
 <h3 id="复杂指针声明">复杂指针声明：</h3>
 <pre><code class="language-C">int (*(*func)[5][6])[7][8]; 
 </code></pre>
 <p>先看func所在的括号，func先于<em>结合，说明这是指针，再与[5][6]结合，说明这个指针指向[5][6]的数组，再与第一个</em>结合，说明这个数组的元素为指针，再与右边的[7][8]结合，说明这个指针指向[7][8]的数组，这个数组里的元素是int类型的。<br>
-<strong>简单说</strong>：这是一个<strong>数组指针</strong>，指向一个[5][6]二维数组，数组的元素是指向[7][8]二维数组的指针。</p>
-</br>
+<strong>简单说</strong>：这是一个 <strong>数组指针</strong>，指向一个[5][6]二维数组，数组的元素是指向[7][8]二维数组的指针。</p>
 <pre><code class="language-C">int (*(*(*func)(int *))[5])(int *);
 </code></pre>
 <p>先看func所在的括号，func先于*结合，说明这是指针，再与右边的(int <em>)结合，说明这个指针指向函数，函数的参数是int <em>类型的，再与第二个</em>结合，说明这个函数的返回值是指针，再与[5]结合，说明这个函数返回的是[5]数组的指针，再与第一个</em>结合，说明返回的这个数组指针指向另一个指针，这个指针指向参数是int *类型返回值是int类型的函数。<br>
-<strong>简单说</strong>：这是一个<strong>函数指针</strong>，函数返回值是指向[5]数组的指针，数组的元素是一个函数指针。</p>
-</br>
+<strong>简单说</strong>：这是一个 <strong>函数指针</strong>，函数返回值是指向[5]数组的指针，数组的元素是一个函数指针。</p>
 <pre><code class="language-C">int (*(*func[7][8][9])(int*))[5];
 </code></pre>
-<p>先看func所在的括号，func先于[7][8][9]结合，func前面是*，说明这是一个指针数组，再与(int *)结合，说明指向一个参数是int *的函数，再与第一个*结合，说明这个函数的返回值是指针，这个指针指向[5]的数组，数组里的元素是int 类型的。</p>
-<p><strong>简单说</strong>：这是一个<strong>指针数组</strong>，这个数组的容量是[7][8][9]，数组元素是函数指针，函数的返回的值是指向[5]数组的指针。</p>
-</br>
+<p>先看func所在的括号，func先于[7][8][9]结合，func前面是*，说明这是一个指针数组，再与(int *)结合，说明指向一个参数是int *的函数，再与第一个*结合，说明这个函数的返回值是指针，这个指针指向[5]的数组，数组里的元素是int类型的。</p>
+<p><strong>简单说</strong> ：这是一个 指针数组 ，这个数组的容量是[7][8][9]，数组元素是函数指针，函数的返回的值是指向[5]数组的指针。</p>
 
         </div>
         

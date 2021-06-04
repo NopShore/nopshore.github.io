@@ -87,7 +87,7 @@
     },
     "headline": "在Linux上使用VIPER4音效 | 无岸的Blog","datePublished": "2019-09-12T15:35:19+08:00",
     "dateModified": "2021-06-02T09:06:08+08:00",
-    "wordCount":  1316 ,
+    "wordCount":  1356 ,
     "author": {
         "@type": "Person",
         "name": "nopshore-author"
@@ -258,10 +258,9 @@
             <h2 id="viper4音效是什么">VIPER4音效是什么？</h2>
 <p>摘自百度百科：<a href="https://baike.baidu.com/item/ViPER4Android/8815475">VIPER4Android</a></p>
 <blockquote>
-<p>ViPER4Android XHiFi 是一款用于Android系统的全局音效驱动，主要用于还原音频中原有的声音细节，包括回放增益、均衡器、音频重构和限幅器。并于2013年9月5日更新至2.1.0.2-1后停止更新，其功能并入FX版本。（注意：作者并未明确表示XHIFI版可支持安卓4.4）
+<p>ViPER4Android XHiFi 是一款用于Android系统的全局音效驱动，主要用于还原音频中原有的声音细节，包括回放增益、均衡器、音频重构和限幅器。并于2013年9月5日更新至2.1.0.2-1后停止更新，其功能并入FX版本。（注意：作者并未明确表示XHIFI版可支持安卓4.4）<br>
 ViPER4Android FX 同样是一款用于Android系统的全局音效驱动，主要用于给音频渲染各种各样的音频效果，包括回放增益、均衡器、脉冲反馈处理、场环绕、数字混响、动态系统和限幅器。无浮点运算的机型(如采用PXA920 CPU的机器)不支持脉冲反馈处理和耳机环绕核擎+效果。持续更新至今。(注：当前版本驱动选择也受到平台限制，无NEON模块的平台无法选择高质量以及发烧级驱动)</p>
 </blockquote>
-</br>
 <p>VIPER4论坛：<a href="http://forum.vipersaudio.com/">http://forum.vipersaudio.com/</a></p>
 <p>支持平台：</p>
 <ul>
@@ -269,37 +268,46 @@ ViPER4Android FX 同样是一款用于Android系统的全局音效驱动，主�
 <li>Windows</li>
 <li>Linux (Github)</li>
 </ul>
-<p>大家所熟知的有两个版本，安卓平台VIPER4Android简称V4A；Windows平台VIPER4Windows简称V4W。博主在逛Github中发现了VIPER4的Linux版本<a href="https://github.com/noahbliss/Viper4Linux">VIPER4Linux</a>。</p>
+</br>
+大家所熟知的有两个版本，安卓平台VIPER4Android简称V4A；Windows平台VIPER4Windows简称V4W。博主在逛Github中发现了VIPER4的Linux版本[VIPER4Linux](https://github.com/noahbliss/Viper4Linux)。
 </br>
 <h2 id="安装viper4linux">安装VIPER4Linux</h2>
-<p>VIPER4Linux项目地址：https://github.com/noahbliss/Viper4Linux</p>
-<p>如果你使用ArchLinux的话输入这条命令直接安装：</p>
+<ol>
+<li>VIPER4Linux项目地址：https://github.com/noahbliss/Viper4Linux<br>
+如果你使用ArchLinux的话输入这条命令直接安装：</li>
+</ol>
 <pre><code class="language-shell"> yay -S viper4linux-git 
 </code></pre>
 <p>其他发行版或者需要手动安装详见项目介绍：https://github.com/noahbliss/Viper4Linux</p>
 </br>
 <h2 id="安装图形前端">安装图形前端</h2>
-<p>如果需要图形界面的话，则另外还需要安装一个GUI前端的包：</p>
+<ol>
+<li>如果需要图形界面的话，则另外还需要安装一个GUI前端的包：</li>
+</ol>
 <pre><code class="language-shell"> yay -S viper4linux-gui-git
 </code></pre>
 <p>VIPER4Linux图形前端项目地址：https://github.com/ThePBone/Viper4Linux-GUI</p>
 </br>
 <h2 id="配置">配置</h2>
-<p>先在~/.config/viper4linux目录下新建一个文件：devices.conf</p>
+<ol>
+<li>先在~/.config/viper4linux目录下新建一个文件：devices.conf</li>
+</ol>
 <pre><code class="language-shell"> touch ~/.config/viper4linux/devices.conf
 </code></pre>
-<p>如果你的shell环境是英文,则命令行输入：</p>
+<ol start="2">
+<li>如果你的shell环境是英文,则命令行输入：</li>
+</ol>
 <pre><code class="language-shell"> pactl list sinks | grep &quot;Name: &quot; -A1
 </code></pre>
 <p>如果你的shell环境是中文,则命令行输入：</p>
 <pre><code class="language-shell"> pactl list sinks | grep &quot;名称：&quot; -A1
 </code></pre>
-<p>找到 <strong>Name:</strong> 或者 <strong>名称：</strong> 后面的字段，复制</p>
-<p>打开devices.conf 写入下面内容：</p>
+<ol start="3">
+<li>找到 <strong>Name:</strong> 或者 <strong>名称：</strong> 后面的字段，复制后打开devices.conf 写入下面内容：</li>
+</ol>
 <pre><code class="language-shell">location=把Name: 或者 名称：后面字段复制进来
 </code></pre>
-</br>
-<p><strong>比如我输入 pactl list sinks | grep &ldquo;名称：&rdquo; -A1 结果是：</strong></p>
+<p>比如我输入 pactl list sinks | grep &ldquo;名称：&rdquo; -A1 结果是：</p>
 <pre><code class="language-shell">$ pactl list sinks | grep &quot;名称：&quot; -A1
 名称：alsa_output.pci-0000_00_1f.3.analog-stereo
 描述：内置音频 模拟立体声
@@ -309,27 +317,36 @@ ViPER4Android FX 同样是一款用于Android系统的全局音效驱动，主�
 </code></pre>
 </br>
 <h2 id="使用">使用</h2>
-<p>完成上面的配置后就可以启动了</p>
-<p>启动 VIPER4Linux</p>
+<p>完成上面的配置后就可以启动了。</p>
+<ul>
+<li>启动 VIPER4Linux</li>
+</ul>
 <pre><code class="language-shell">viper start
 </code></pre>
-<p>重新启动</p>
+<ul>
+<li>重新启动</li>
+</ul>
 <pre><code class="language-shell">viper restart
 </code></pre>
-<p>关闭</p>
+<ul>
+<li>关闭</li>
+</ul>
 <pre><code class="language-shell">viper stop
 </code></pre>
-<p>查看状态</p>
+<ul>
+<li>查看状态</li>
+</ul>
 <pre><code class="language-shell">viper status
 </code></pre>
 </br>
 <h2 id="配置音效">配置音效</h2>
-<p>音效的配置在  ~/.config/viper4linux/audio.conf 中 可按自己的喜好修改</p>
-<p>建议配合VIPER4Linux图形前端进行管理配置</p>
-<p>脉冲反馈样本 可在 ~/ 下建立一个名为IRS的文件夹 把样本放在文件夹配合 VIPER4Linux图形前端进行管理</p>
-<p>VIPER4音效配置：https://github.com/noahbliss/Viper4Linux-Configs</p>
-<p>更多音效配置或者脉冲反馈样本可在 VIPER4论坛：http://forum.vipersaudio.com/ 自行寻找</p>
-</br>
+<ul>
+<li>音效的配置在  ~/.config/viper4linux/audio.conf 中 可按自己的喜好修改。</li>
+<li>建议配合VIPER4Linux图形前端进行管理配置。</li>
+<li>脉冲反馈样本 可在 ~/ 下建立一个名为IRS的文件夹 把样本放在文件夹配合 VIPER4Linux- 图形前端进行管理。</li>
+<li>VIPER4音效配置：https://github.com/noahbliss/Viper4Linux-Configs<br>
+更多音效配置或者脉冲反馈样本可在 VIPER4论坛：http://forum.vipersaudio.com/ 自行寻找。</li>
+</ul>
 
         </div>
         
