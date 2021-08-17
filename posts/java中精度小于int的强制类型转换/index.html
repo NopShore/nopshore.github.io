@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang='zh' ><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+<title>Java中精度小于int的强制类型转换 | 无岸的Blog</title>
+
+<meta name="generator" content="Hugo Eureka 0.8.3-dev" />
+<link rel="stylesheet" href="https://nopshore.top/css/eureka.min.css">
+<script defer src="https://nopshore.top/js/eureka.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js"
+   crossorigin></script>
+
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js"
+     crossorigin></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+   integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
+  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js" 
+  integrity="sha256-Zmpaaj&#43;GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE="  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://nopshore.top/images/icon_hu82a47dd308082b5625d3422584f28239_9342_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://nopshore.top/images/icon_hu82a47dd308082b5625d3422584f28239_9342_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="精度小于int的数值运算的时候会被自动转换为int后进行运算 public class Demo{ public static void main(String[] args){ short s1 = 5; int i1 = 3; s1 = s1 &#43; (short)i1; // 编译报错，不兼容的类型: 从int转换到shor">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"文章",
+      "item":"https://nopshore.top/posts/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"Java中精度小于int的强制类型转换",
+      "item":"https://nopshore.top/posts/java%E4%B8%AD%E7%B2%BE%E5%BA%A6%E5%B0%8F%E4%BA%8Eint%E7%9A%84%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://nopshore.top/posts/java%E4%B8%AD%E7%B2%BE%E5%BA%A6%E5%B0%8F%E4%BA%8Eint%E7%9A%84%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/"
+    },
+    "headline": "Java中精度小于int的强制类型转换 | 无岸的Blog","datePublished": "2021-08-18T03:04:41+08:00",
+    "dateModified": "2021-08-18T03:04:41+08:00",
+    "wordCount":  500 ,
+    "author": {
+        "@type": "Person",
+        "name": "nopshore-author"
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "nopshore",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://nopshore.top/images/icon.png"
+        }
+        },
+    "description": "精度小于int的数值运算的时候会被自动转换为int后进行运算 public class Demo{ public static void main(String[] args){ short s1 = 5; int i1 = 3; s1 = s1 \u002b (short)i1; \/\/ 编译报错，不兼容的类型: 从int转换到shor"
+}
+</script><meta property="og:title" content="Java中精度小于int的强制类型转换 | 无岸的Blog" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://nopshore.top/images/icon.png">
+
+
+<meta property="og:url" content="https://nopshore.top/posts/java%E4%B8%AD%E7%B2%BE%E5%BA%A6%E5%B0%8F%E4%BA%8Eint%E7%9A%84%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" />
+
+
+
+
+<meta property="og:description" content="精度小于int的数值运算的时候会被自动转换为int后进行运算 public class Demo{ public static void main(String[] args){ short s1 = 5; int i1 = 3; s1 = s1 &#43; (short)i1; // 编译报错，不兼容的类型: 从int转换到shor" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="无岸的Blog" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2021-08-18T03:04:41&#43;08:00" />
+
+
+<meta property="article:modified_time" content="2021-08-18T03:04:41&#43;08:00" />
+
+
+
+<meta property="article:section" content="posts" />
+
+
+<meta property="article:tag" content="Java" />
+
+<meta property="article:tag" content="类型转换" />
+
+
+
+
+
+<meta property="og:see_also" content="https://nopshore.top/posts/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A6%82%E8%BF%B0%E4%BA%8C%E5%B0%81%E8%A3%85/" />
+
+<meta property="og:see_also" content="https://nopshore.top/posts/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A6%82%E8%BF%B0%E4%B8%80%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%AE%9E%E4%BE%8B%E5%8C%96/" />
+
+
+
+<body class="flex flex-col min-h-screen">
+  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+    <div class="w-full max-w-screen-xl mx-auto"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="mr-6 text-primary-text text-xl font-bold">无岸的Blog</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/authors/nopshore-author/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">关于</a>
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">文章</a>
+            <a href="/categories/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">分类</a>
+            <a href="/tags/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">标签</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">文档</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+  </header>
+  <main class="flex-grow pt-16">
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+
+
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">Java中精度小于int的强制类型转换</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-08-18</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟阅读时长</span>
+    </div>
+    
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-folder mr-1"></i>
+        
+        <a href="https://nopshore.top/categories/%E7%BC%96%E7%A8%8B/" class="hover:text-eureka">编程</a>
+        
+    </div>
+    
+
+    
+</div>
+        
+        
+        
+
+        <div class="content">
+            <h2 id="精度小于int的数值运算的时候会被自动转换为int后进行运算">精度小于int的数值运算的时候会被自动转换为int后进行运算</h2>
+<pre><code class="language-java">public class Demo{
+    public static void main(String[] args){
+        short s1 = 5;
+        int i1 = 3;
+        s1 = s1 + (short)i1; // 编译报错，不兼容的类型: 从int转换到short可能会有损失。
+        // 原因：精度小于int的数值运算的时候会被自动转换为int后进行运算。
+        // 所以s1 = s1 + (short)i1; 即使将i1强转为short也会被自动转换为int类型。
+        // 实际上是：s1[short类型] = s1[自动转换为int] + (short)i1[自动转换为int]
+        // 相当于运算后得到的是还是int类型，所以赋值给short类型会报错。
+        
+        short s2 = 5;
+        int i2 = 3;
+        s2 = (short)(s2 + i2); // 编译通过
+        // 即使s2和i2做运算会被转换成int类型，但运算后的结果会被强转为short类型。
+        // 运算后的结果转换为short类型，再赋值给short类型，自然就没有问题了。
+
+        short s3 = 2;
+        short s4 = 3;
+        s3 += s4; // 编译通过
+        // 通常使用 += 运算符不会出现此类问题。
+
+
+
+        int i5 = 6;
+        long l5 = 7;
+        i5 = i5 + (int)l5; // 编译通过
+
+        int i6;
+        long l6 = 2;
+        long l7 = 4;
+        i6 = (int)l6 + (int)l7; // 编译通过
+        // 只有精度小于int的数值做运算的时候才会自动转换为int类型做运算
+        // 上述两个例子运算后精度刚好都是int(没有被自动转换),所要赋值给的变量也是int,所以编译通过。
+
+        System.out.println(s2);
+        System.out.println(s3);
+        System.out.println(i5);
+        System.out.println(i6);
+    }
+}
+</code></pre>
+
+        </div>
+        
+        <div class="my-4">
+    
+    <a href="https://nopshore.top/tags/java/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Java</a>
+    
+    <a href="https://nopshore.top/tags/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#类型转换</a>
+    
+</div>
+        
+        
+        
+
+
+        
+        
+        <div class="py-2">
+    
+    <div class="flex flex-col md:flex-row items-center my-8">
+        <a href="https://nopshore.top/authors/nopshore-author/" class="w-24 h-24 md:mr-4">
+            
+            
+            <img src="https://nopshore.top/images/avatar-nopshore-5.jpg" class="w-full bg-primary-bg rounded-full" alt="Avatar">
+            
+        </a>
+        <div class="w-full md:w-auto mt-4 md:mt-0">
+            <a href="https://nopshore.top/authors/nopshore-author/" class="block font-bold text-lg pb-1 mb-2 border-b">无岸</a>
+            <span class="block pb-2">日出之美便在于它脱胎于最深的黑暗。</span>
+            
+            
+            
+            
+            
+            <a href="https://t.me/NopShore" class="mr-1">
+                <i class="fab fa-telegram"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://github.com/NopShore" class="mr-1">
+                <i class="fab fa-github"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://twitter.com/nopshore" class="mr-1">
+                <i class="fab fa-twitter"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="mailto:nopshore@163.com" class="mr-1">
+                <i class="fas fa-envelope"></i>
+            </a>
+            
+        </div>
+    </div>
+    
+</div>
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">下一页</span>
+        <a href="https://nopshore.top/posts/%E4%B8%80%E4%BA%9B%E5%B8%AE%E5%8A%A9%E5%AD%A6%E4%B9%A0%E7%9A%84%E7%BD%91%E7%AB%99%E9%95%BF%E6%9C%9F%E6%9B%B4%E6%96%B0/" class="block">一些帮助学习的网站（长期更新）</a>
+        
+    </div>
+</div>
+
+        
+
+
+
+  <script id="utterances" src="https://utteranc.es/client.js"
+            issue-term=athname
+            repo=NopShore/blog-comment
+              theme=preferred-color-scheme
+        crossorigin="anonymous"
+        async>
+</script>
+<script>
+    if (storageColorScheme == "Light") {
+      document.getElementById('utterances').setAttribute('theme', 'github-light')
+    } else if (storageColorScheme == "Dark") {
+      document.getElementById('utterances').setAttribute('theme', 'github-dark')
+    }
+</script>
+
+    </div>
+    
+    <div class="col-span-2">
+        
+        
+        <div class="sticky top-16 z-10 hidden lg:block px-6 py-4  bg-primary-bg ">
+    <span class="text-lg font-semibold">本页内容</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6 ">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#精度小于int的数值运算的时候会被自动转换为int后进行运算">精度小于int的数值运算的时候会被自动转换为int后进行运算</a></li>
+  </ul>
+</nav>
+</div>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        enableStickyToc();
+    });
+</script>
+        
+    </div>
+    
+
+    
+    
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded p-6">
+        <h2 class="text-lg font-semibold mb-4">相关</h2>
+        <div class="content">
+            
+            <a href="https://nopshore.top/posts/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A6%82%E8%BF%B0%E4%BA%8C%E5%B0%81%E8%A3%85/">Java面向对象概述（二）：封装</a>
+            <br />
+            
+            <a href="https://nopshore.top/posts/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A6%82%E8%BF%B0%E4%B8%80%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%AE%9E%E4%BE%8B%E5%8C%96/">Java面向对象概述（一）：类的定义与实例化</a>
+            <br />
+            
+        </div>
+    </div>
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
+
+      </div>
+    </div>
+    
+  </main>
+  <footer class="pl-scrollbar">
+    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text">&copy; 2019 - 2021 <a href="https://nopshore.top">无岸</a> · <a href="https://icp.gov.moe/?keyword=20210731" target="_blank">萌ICP备20210731号</a>
+ &middot;  Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+  </footer>
+</body>
+
+</html>

@@ -8,7 +8,16 @@
     <language>zh</language>
     <copyright>&amp;copy; 2019 - 2021 &lt;a href=&#34;https://nopshore.top&#34;&gt;无岸&lt;/a&gt; · &lt;a href=&#34;https://icp.gov.moe/?keyword=20210731&#34; target=&#34;_blank&#34;&gt;萌ICP备20210731号&lt;/a&gt;
 </copyright>
-    <lastBuildDate>Sun, 06 Jun 2021 00:17:03 +0800</lastBuildDate><atom:link href="https://nopshore.top/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Aug 2021 03:04:41 +0800</lastBuildDate><atom:link href="https://nopshore.top/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java中精度小于int的强制类型转换</title>
+      <link>https://nopshore.top/posts/java%E4%B8%AD%E7%B2%BE%E5%BA%A6%E5%B0%8F%E4%BA%8Eint%E7%9A%84%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</link>
+      <pubDate>Wed, 18 Aug 2021 03:04:41 +0800</pubDate>
+      
+      <guid>https://nopshore.top/posts/java%E4%B8%AD%E7%B2%BE%E5%BA%A6%E5%B0%8F%E4%BA%8Eint%E7%9A%84%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</guid>
+      <description>精度小于int的数值运算的时候会被自动转换为int后进行运算 public class Demo{ public static void main(String[] args){ short s1 = 5; int i1 = 3; s1 = s1 + (short)i1; // 编译报错，不兼容的类型: 从int转换到shor</description>
+    </item>
+    
     <item>
       <title>一些帮助学习的网站（长期更新）</title>
       <link>https://nopshore.top/posts/%E4%B8%80%E4%BA%9B%E5%B8%AE%E5%8A%A9%E5%AD%A6%E4%B9%A0%E7%9A%84%E7%BD%91%E7%AB%99%E9%95%BF%E6%9C%9F%E6%9B%B4%E6%96%B0/</link>

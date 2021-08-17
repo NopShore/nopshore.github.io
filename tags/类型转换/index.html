@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>无岸的Blog</title>
+<title>类型转换 | 无岸的Blog</title>
 
 <meta name="generator" content="Hugo Eureka 0.8.3-dev" />
 <link rel="stylesheet" href="https://nopshore.top/css/eureka.min.css">
@@ -59,17 +59,46 @@
 
 <meta name="description"
   content="Eureka is a elegant and powerful theme for Hugo.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"标签",
+      "item":"https://nopshore.top/tags/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"类型转换",
+      "item":"https://nopshore.top/tags/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/"}]
+}
+</script>
 
 
 
-<meta property="og:title" content="无岸的Blog" />
+
+<script type="application/ld+json">
+{
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "itemListElement":[{
+            "@type":"ListItem",
+            "position":  1 ,
+            "name": "Java中精度小于int的强制类型转换",
+            "description": "精度小于int的数值运算的时候会被自动转换为int后进行运算 public class Demo{ public static void main(String[] args){ short s1 = 5; int i1 = 3; s1 = s1 + (short)i1; // 编译报错，不兼容的类型: 从int转换到shor",
+            "url": "https://nopshore.top/posts/java%E4%B8%AD%E7%B2%BE%E5%BA%A6%E5%B0%8F%E4%BA%8Eint%E7%9A%84%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/"
+        }
+    ]
+}
+</script><meta property="og:title" content="类型转换 | 无岸的Blog" />
 <meta property="og:type" content="website" />
 
 
 <meta property="og:image" content="https://nopshore.top/images/icon.png">
 
 
-<meta property="og:url" content="https://nopshore.top/" />
+<meta property="og:url" content="https://nopshore.top/tags/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" />
 
 
 
@@ -97,10 +126,10 @@
 
 
 
-<meta property="article:section" content="" />
+<meta property="article:section" content="tags" />
 
 
-<link rel="alternate" type="application/rss+xml" href="https://nopshore.top/index.xml" title="无岸的Blog" />
+<link rel="alternate" type="application/rss+xml" href="https://nopshore.top/tags/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/index.xml" title="无岸的Blog" />
 
 <body class="flex flex-col min-h-screen">
   <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
@@ -122,7 +151,7 @@
             <a href="/authors/nopshore-author/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">关于</a>
             <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">文章</a>
             <a href="/categories/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">分类</a>
-            <a href="/tags/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">标签</a>
+            <a href="/tags/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">标签</a>
             <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">文档</a>
         </div>
 
@@ -172,220 +201,14 @@
 </div>
   </header>
   <main class="flex-grow pt-16">
-  
-  
-  
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+<article class="mx-6 my-8">
+    <h1 class="font-bold text-3xl text-primary-text">类型转换</h1>
     
-      
-  
-
-  
-
-  
-  
-  
-
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-  
-
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-    
-
-    
-    
-    
-    
-    
-  
-
-  <div class="pl-scrollbar bg-secondary-bg" 
-    >
-    <div class="max-w-screen-xl mx-auto">
-      <div id="about" class="lg:w-3/4 mx-auto px-6 md:px-8 xl:px-12 py-12">
-        
-  
-
-  
-    <div class="flex flex-col md:flex-row items-center justify-center mb-12">
-  
-  
-    <div class="flex-none w-48 mx-auto md:ml-0 md:mr-8 md:pr-8 md:border-r">
-      <img src="https://nopshore.top/images/avatar-nopshore-5.jpg" class="rounded-full" alt="Avatar">
-    </div>
-  
-  <div class="flex-grow mt-4 md:mt-0">
-    <div class="text-3xl py-4">无岸</div>
-    <div class="w-3/12 xl:w-2/12 border-b"></div>
-
-    <div class="flex items-center pt-4">
-      
-        <i class="fas fa-user"></i>
-      
-      <div class="flex flex-wrap">
-        
-          <span class="pl-4">自由人</span>
-        
-
-        
-          <a href="https://nopshore.top" class="pl-4">无岸的Blog</a>
-        
-      </div>
-
-    </div>
-
-    
-      <div class="py-8 text-lg leading-normal">
-        日出之美便在于它脱胎于最深的黑暗。
-      </div>
-    
-  </div>
-  <div class="flex md:flex-col justify-center items-end ml-8">
-    
-    
-      
-      
-      
-      
-      
-      <div class="pb-2 pr-4 md:pr-0 pt-4 md:pt-0">
-        <a href="https://t.me/NopShore"><i class="fab fa-telegram"></i></a>
-      </div>
-    
-      
-      
-      
-      
-      
-      <div class="pb-2 pr-4 md:pr-0 pt-4 md:pt-0">
-        <a href="https://github.com/NopShore"><i class="fab fa-github"></i></a>
-      </div>
-    
-      
-      
-      
-      
-      
-      <div class="pb-2 pr-4 md:pr-0 pt-4 md:pt-0">
-        <a href="https://twitter.com/nopshore"><i class="fab fa-twitter"></i></a>
-      </div>
-    
-      
-      
-      
-      
-      
-      <div class="pb-2 pr-4 md:pr-0 pt-4 md:pt-0">
-        <a href="mailto:nopshore@163.com"><i class="fas fa-envelope"></i></a>
-      </div>
-    
-  </div>
-</div>
-<div class="content">
-  <h2 id="关于我">关于我</h2>
-<h3 id="个人信息">个人信息</h3>
-<ul>
-<li>
-<h4 id="-无岸-00年-夜猫子">👩🏻‍💻 无岸 00年 夜猫子</h4>
-</li>
-<li>
-<h4 id="-完美主义-唯心主义-intp-infp">🎯 完美主义 唯心主义 INTP? INFP?</h4>
-</li>
-</ul>
-<h3 id="喜好标签">喜好标签</h3>
-<ul>
-<li>
-<h4 id="-客制化键盘-耳机-滑板">🧡 客制化键盘 耳机 滑板</h4>
-</li>
-</ul>
-<!---
-NopShore/NopShore is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
-
-</div>
-
-  
-
-      </div>
-    </div>
-  </div>
-
-    
-
-  
-  
-    
-      
-  
-
-  
-
-  
-  
-  
-
-  
-    
-    
-    
-    
-      
-      
-    
-  
-
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-    
-
-    
-    
-    
-    
-    
-  
-
-  <div class="pl-scrollbar bg-primary-bg" 
-    >
-    <div class="max-w-screen-xl mx-auto">
-      <div id="pages" class="lg:w-3/4 mx-auto px-6 md:px-8 xl:px-12 py-12">
-        
-  
-
-  
-    
-  <h2 class=" font-bold text-3xl my-4">最近文章</h2>
-
-
-  
-  
-  <div class="overflow-hidden divide-y">
+</article>
+<div class="bg-secondary-bg rounded px-6">
+    <div class="overflow-hidden divide-y">
   
   <div class="py-6">
     <div class="flex flex-col-reverse lg:flex-row justify-between">
@@ -426,193 +249,15 @@ You can click the Preview link to take a look at your changes.
 </div>
   </div>
   
-  <div class="py-6">
-    <div class="flex flex-col-reverse lg:flex-row justify-between">
-  
-  <div class="w-full ">
-    <div class="mb-4">
-  <a href="https://nopshore.top/posts/%E4%B8%80%E4%BA%9B%E5%B8%AE%E5%8A%A9%E5%AD%A6%E4%B9%A0%E7%9A%84%E7%BD%91%E7%AB%99%E9%95%BF%E6%9C%9F%E6%9B%B4%E6%96%B0/" class="font-bold text-xl hover:text-eureka">一些帮助学习的网站（长期更新）</a>
-</div>
-<div class="content">
-  Biliili [B站 Leetcode力扣官方号] - https://space.bilibili.com/390775036?spm_id_from=333.788.b_765f7570696e666f.2 bilibili Leetcode力扣官方号 [B站 codesheep 程序羊 提供学习建议和经验] - https://www.bilibili.com/video/BV1jt411H71h B站 codesheep 程序羊 提供学习建议和经验 [B站 全网最全
-</div>
-
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
-    <div class="mr-6 my-2">
-        <i class="fas fa-calendar mr-1"></i>
-        <span>2021-06-06</span>
-    </div>
-    <div class="mr-6 my-2">
-        <i class="fas fa-clock mr-1"></i>
-        <span>4分钟阅读时长</span>
-    </div>
-    
-    
-    <div class="mr-6 my-2">
-        <i class="fas fa-folder mr-1"></i>
-        
-        <a href="https://nopshore.top/categories/%E5%AD%A6%E4%B9%A0/" class="hover:text-eureka">学习</a>
-        
-    </div>
-    
-
-    
-</div>
-
-  </div>
-
-  
-</div>
-  </div>
-  
-  <div class="py-6">
-    <div class="flex flex-col-reverse lg:flex-row justify-between">
-  
-  <div class="w-full ">
-    <div class="mb-4">
-  <a href="https://nopshore.top/posts/%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%85%AB%E8%BF%9B%E5%88%B6%E5%8D%81%E8%BF%9B%E5%88%B6%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2/" class="font-bold text-xl hover:text-eureka">二进制、八进制、十进制、十六进制间的转换</a>
-</div>
-<div class="content">
-  二进制与十进制之间的转换 1. 二进制转十进制 二进制从最低位到高位表示的十进制数值是1、2、4、8、16、32…的规律延申下去的，及$2^0、
-</div>
-
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
-    <div class="mr-6 my-2">
-        <i class="fas fa-calendar mr-1"></i>
-        <span>2021-06-04</span>
-    </div>
-    <div class="mr-6 my-2">
-        <i class="fas fa-clock mr-1"></i>
-        <span>5分钟阅读时长</span>
-    </div>
-    
-    
-    <div class="mr-6 my-2">
-        <i class="fas fa-folder mr-1"></i>
-        
-        <a href="https://nopshore.top/categories/%E5%8E%9F%E7%90%86/" class="hover:text-eureka">原理</a>
-        
-    </div>
-    
-
-    
-</div>
-
-  </div>
-
-  
-</div>
-  </div>
-  
-  <div class="py-6">
-    <div class="flex flex-col-reverse lg:flex-row justify-between">
-  
-  <div class="w-full ">
-    <div class="mb-4">
-  <a href="https://nopshore.top/posts/%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%9A%84%E5%8E%9F%E7%A0%81%E5%8F%8D%E7%A0%81%E4%B8%8E%E8%A1%A5%E7%A0%81/" class="font-bold text-xl hover:text-eureka">二进制的原码、反码与补码</a>
-</div>
-<div class="content">
-  计算机中正数和负数如何表示？ 在计算机中，所有的数据均以二进制数值的方式存储。以符号位区分正负数，符号位为0表示是整数。为1表示是负数。 原码 正数的原码就
-</div>
-
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
-    <div class="mr-6 my-2">
-        <i class="fas fa-calendar mr-1"></i>
-        <span>2021-06-03</span>
-    </div>
-    <div class="mr-6 my-2">
-        <i class="fas fa-clock mr-1"></i>
-        <span>1分钟阅读时长</span>
-    </div>
-    
-    
-    <div class="mr-6 my-2">
-        <i class="fas fa-folder mr-1"></i>
-        
-        <a href="https://nopshore.top/categories/%E5%8E%9F%E7%90%86/" class="hover:text-eureka">原理</a>
-        
-    </div>
-    
-
-    
-</div>
-
-  </div>
-
-  
-</div>
-  </div>
-  
-  <div class="py-6">
-    <div class="flex flex-col-reverse lg:flex-row justify-between">
-  
-  <div class="w-full ">
-    <div class="mb-4">
-  <a href="https://nopshore.top/posts/%E8%A7%A3%E5%86%B3%E5%9C%A8archlinux%E4%B8%8Achrome%E9%A1%B5%E9%9D%A2%E6%BB%9A%E5%8A%A8%E6%8E%89%E5%B8%A7%E7%9A%84%E9%97%AE%E9%A2%98%E5%BC%80%E5%90%AF%E5%B9%B3%E6%BB%91%E6%BB%9A%E5%8A%A8/" class="font-bold text-xl hover:text-eureka">解决在ArchLinux上Chrome页面滚动掉帧的问题（开启平滑滚动）</a>
-</div>
-<div class="content">
-  解决方法 chrome地址栏输入：chrome://flags/#smooth-scrolling 第一项 Smooth Scrolling 选项选择 Disabled 点击右下脚 relaunch now 重启 安装chrome
-</div>
-
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
-    <div class="mr-6 my-2">
-        <i class="fas fa-calendar mr-1"></i>
-        <span>2019-12-27</span>
-    </div>
-    <div class="mr-6 my-2">
-        <i class="fas fa-clock mr-1"></i>
-        <span>1分钟阅读时长</span>
-    </div>
-    
-    
-    <div class="mr-6 my-2">
-        <i class="fas fa-folder mr-1"></i>
-        
-        <a href="https://nopshore.top/categories/%E8%BD%AF%E4%BB%B6%E7%9B%B8%E5%85%B3/" class="hover:text-eureka">软件相关</a>
-        
-    </div>
-    
-
-    
-</div>
-
-  </div>
-
-  
-</div>
-  </div>
-  
 </div>
 
 
-  <div class="pt-2 hover:text-eureka">
-    
-  <a href="https://nopshore.top/posts/" class="font-semibold">阅读更多</a>
-  <i class="fas fa-caret-right ml-1"></i>
+</div>
 
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-  
 
       </div>
     </div>
-  </div>
-
     
-
-  
-  
   </main>
   <footer class="pl-scrollbar">
     <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
