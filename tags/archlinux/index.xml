@@ -16,7 +16,7 @@
       <pubDate>Fri, 27 Dec 2019 20:58:34 +0800</pubDate>
       
       <guid>https://nopshore.top/posts/%E8%A7%A3%E5%86%B3%E5%9C%A8archlinux%E4%B8%8Achrome%E9%A1%B5%E9%9D%A2%E6%BB%9A%E5%8A%A8%E6%8E%89%E5%B8%A7%E7%9A%84%E9%97%AE%E9%A2%98%E5%BC%80%E5%90%AF%E5%B9%B3%E6%BB%91%E6%BB%9A%E5%8A%A8/</guid>
-      <description>解决方法 chrome地址栏输入：chrome://flags/#smooth-scrolling 第一项 Smooth Scrolling 选项选择 Disabled 点击右下脚 relaunch now 重启 安装chrome</description>
+      <description>解决方法 chrome地址栏输入：chrome://flags/#smooth-scrolling 第一项 Smooth Scrolling 选项选择 Disabled 点击右下脚 relaunch now 重启 安装c</description>
     </item>
     
     <item>
@@ -25,7 +25,7 @@
       <pubDate>Thu, 26 Sep 2019 15:16:17 +0800</pubDate>
       
       <guid>https://nopshore.top/posts/%E6%88%91%E5%9C%A8linux%E4%B8%8A%E7%9A%84%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E9%95%BF%E6%9C%9F%E6%9B%B4%E6%96%B0/</guid>
-      <description>操作系统：ArchLinux (Arch死忠粉一枚) 桌面环境：KDE (plasma) 音乐： netease-cloud-music (网易云音乐) Listen1 (集成了网易云、虾米、QQ音乐、酷狗等各大平台的音乐) amarok ViPER4Linux</description>
+      <description>操作系统：ArchLinux (Arch死忠粉一枚) 桌面环境：KDE (plasma) 音乐： netease-cloud-music (网易云音乐) Listen1 (集成了网易云、虾米、QQ音乐、酷狗等各大平台的</description>
     </item>
     
     <item>
@@ -34,7 +34,7 @@
       <pubDate>Thu, 26 Sep 2019 15:16:17 +0800</pubDate>
       
       <guid>https://nopshore.top/posts/%E8%A7%A3%E5%86%B3proxychains%E4%B8%8D%E6%94%AF%E6%8C%81yay%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
-      <description>问题如下 $ proxychains yay -S petal [proxychains] config file found: /etc/proxychains.conf [proxychains] preloading /usr/lib/libproxychains4.so [proxychains] DLL init: proxychains-ng 4.14 Get https://aur.archlinux.org/rpc.php?arg%5B%5D=petal&amp;amp;type=info&amp;amp;v=5: dial tcp 224.0.0.1:443: connect: network is unreachable 解决方法 修改proxychains配置文件，把proxy_dns注释掉。 打开proxyc</description>
+      <description>问题如下 $ proxychains yay -S petal [proxychains] config file found: /etc/proxychains.conf [proxychains] preloading /usr/lib/libproxychains4.so [proxychains] DLL init: proxychains-ng 4.14 Get https://aur.archlinux.org/rpc.php?arg%5B%5D=petal&amp;amp;type=info&amp;amp;v=5: dial tcp 224.0.0.1:443: connect: network is unreachable 解决方法 修改proxychains配置文件，把proxy_dns注释掉。 打开p</description>
     </item>
     
     <item>
@@ -43,7 +43,7 @@
       <pubDate>Thu, 12 Sep 2019 15:35:19 +0800</pubDate>
       
       <guid>https://nopshore.top/posts/%E5%9C%A8linux%E4%B8%8A%E4%BD%BF%E7%94%A8viper4%E9%9F%B3%E6%95%88/</guid>
-      <description>VIPER4音效是什么？ 摘自百度百科：VIPER4Android ViPER4Android XHiFi 是一款用于Android系统的全局音效驱动，主要用于还原音频中原有的声音细节，包括</description>
+      <description>VIPER4音效是什么？ 摘自百度百科：VIPER4Android ViPER4Android XHiFi 是一款用于Android系统的全局音效驱动，主要用于还原音频中原有的声音</description>
     </item>
     
   </channel>

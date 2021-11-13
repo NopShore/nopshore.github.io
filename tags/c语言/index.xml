@@ -16,7 +16,7 @@
       <pubDate>Mon, 26 Aug 2019 20:52:48 +0800</pubDate>
       
       <guid>https://nopshore.top/posts/c%E8%AF%AD%E8%A8%80%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</guid>
-      <description>冒泡排序基本思想 不断比较数组中相邻的两个元素，让两个元素中较大的元素后移，经过一轮比较后，数值中最大的元素将会移动到数组末尾位置，第二轮将数组第二大的</description>
+      <description>冒泡排序基本思想 不断比较数组中相邻的两个元素，让两个元素中较大的元素后移，经过一轮比较后，数值中最大的元素将会移动到数组末尾位置，第二轮将数</description>
     </item>
     
     <item>
@@ -25,7 +25,7 @@
       <pubDate>Fri, 09 Aug 2019 15:33:26 +0800</pubDate>
       
       <guid>https://nopshore.top/posts/c%E8%AF%AD%E8%A8%80%E7%9A%84%E5%A4%8D%E6%9D%82%E5%A3%B0%E6%98%8E/</guid>
-      <description>指针的定义与使用 int i = 5; // 声明一个int类型的变量，把5赋值给它。 int *p; // 声明一个指向int类型的指针。 p = &amp;amp;i; // 把i自身的地址赋值给指针*p。 printf(&amp;quot;%d %p %p %p&amp;quot;,*p,&amp;amp;p,p,&amp;amp;i); 最</description>
+      <description>指针的定义与使用 int i = 5; // 声明一个int类型的变量，把5赋值给它。 int *p; // 声明一个指向int类型的指针。 p = &amp;amp;i; // 把i自身的地址赋值给指针*p。</description>
     </item>
     
   </channel>

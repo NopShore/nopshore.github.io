@@ -16,7 +16,7 @@
       <pubDate>Thu, 26 Sep 2019 15:16:17 +0800</pubDate>
       
       <guid>https://nopshore.top/posts/%E8%A7%A3%E5%86%B3proxychains%E4%B8%8D%E6%94%AF%E6%8C%81yay%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
-      <description>问题如下 $ proxychains yay -S petal [proxychains] config file found: /etc/proxychains.conf [proxychains] preloading /usr/lib/libproxychains4.so [proxychains] DLL init: proxychains-ng 4.14 Get https://aur.archlinux.org/rpc.php?arg%5B%5D=petal&amp;amp;type=info&amp;amp;v=5: dial tcp 224.0.0.1:443: connect: network is unreachable 解决方法 修改proxychains配置文件，把proxy_dns注释掉。 打开proxyc</description>
+      <description>问题如下 $ proxychains yay -S petal [proxychains] config file found: /etc/proxychains.conf [proxychains] preloading /usr/lib/libproxychains4.so [proxychains] DLL init: proxychains-ng 4.14 Get https://aur.archlinux.org/rpc.php?arg%5B%5D=petal&amp;amp;type=info&amp;amp;v=5: dial tcp 224.0.0.1:443: connect: network is unreachable 解决方法 修改proxychains配置文件，把proxy_dns注释掉。 打开p</description>
     </item>
     
   </channel>
