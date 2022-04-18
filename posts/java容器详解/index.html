@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang='zh' ><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+<title>Java容器详解 | 无岸的Blog</title>
+
+<meta name="generator" content="Hugo Eureka 0.8.4" />
+<link rel="stylesheet" href="https://nopshore.top/css/eureka.min.css">
+<script defer src="https://nopshore.top/js/eureka.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js"
+   crossorigin></script>
+
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js"
+     crossorigin></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+   integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
+  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js" 
+  integrity="sha256-Zmpaaj&#43;GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE="  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://nopshore.top/images/icon_hu5c7d4a174d3dc002c34b5df40db2104c_3400_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://nopshore.top/images/icon_hu5c7d4a174d3dc002c34b5df40db2104c_3400_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="容器相关接口继承结构 Collection List ArrayList LinkedList Vector Set HashSet LinkedHashSet TreeSet Map HashMap LinkedHashMet TreeMap ConcurrentHashMap Hashtable List接口 List接口存储的数据是有序的、可重复的 ArrayList 线程不安全 可存储不同类型的对象 底层使">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"文章",
+      "item":"https://nopshore.top/posts/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"Java容器详解",
+      "item":"https://nopshore.top/posts/java%E5%AE%B9%E5%99%A8%E8%AF%A6%E8%A7%A3/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://nopshore.top/posts/java%E5%AE%B9%E5%99%A8%E8%AF%A6%E8%A7%A3/"
+    },
+    "headline": "Java容器详解 | 无岸的Blog","datePublished": "2022-04-19T00:10:29+08:00",
+    "dateModified": "2022-04-19T00:10:29+08:00",
+    "wordCount":  863 ,
+    "author": {
+        "@type": "Person",
+        "name": "nopshore-author"
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "nopshore",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://nopshore.top/images/icon.png"
+        }
+        },
+    "description": "容器相关接口继承结构 Collection List ArrayList LinkedList Vector Set HashSet LinkedHashSet TreeSet Map HashMap LinkedHashMet TreeMap ConcurrentHashMap Hashtable List接口 List接口存储的数据是有序的、可重复的 ArrayList 线程不安全 可存储不同类型的对象 底层使"
+}
+</script><meta property="og:title" content="Java容器详解 | 无岸的Blog" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://nopshore.top/images/icon.png">
+
+
+<meta property="og:url" content="https://nopshore.top/posts/java%E5%AE%B9%E5%99%A8%E8%AF%A6%E8%A7%A3/" />
+
+
+
+
+<meta property="og:description" content="容器相关接口继承结构 Collection List ArrayList LinkedList Vector Set HashSet LinkedHashSet TreeSet Map HashMap LinkedHashMet TreeMap ConcurrentHashMap Hashtable List接口 List接口存储的数据是有序的、可重复的 ArrayList 线程不安全 可存储不同类型的对象 底层使" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="无岸的Blog" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2022-04-19T00:10:29&#43;08:00" />
+
+
+<meta property="article:modified_time" content="2022-04-19T00:10:29&#43;08:00" />
+
+
+
+<meta property="article:section" content="posts" />
+
+
+<meta property="article:tag" content="Java" />
+
+<meta property="article:tag" content="集合" />
+
+<meta property="article:tag" content="容器" />
+
+
+
+
+
+<meta property="og:see_also" content="https://nopshore.top/posts/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/" />
+
+<meta property="og:see_also" content="https://nopshore.top/posts/java%E8%BF%90%E7%AE%97%E6%97%B6%E7%9A%84%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" />
+
+<meta property="og:see_also" content="https://nopshore.top/posts/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A6%82%E8%BF%B0%E4%BA%8C%E5%B0%81%E8%A3%85/" />
+
+<meta property="og:see_also" content="https://nopshore.top/posts/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A6%82%E8%BF%B0%E4%B8%80%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%AE%9E%E4%BE%8B%E5%8C%96/" />
+
+
+
+<body class="flex flex-col min-h-screen">
+  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+    <div class="w-full max-w-screen-xl mx-auto"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="mr-6 text-primary-text text-xl font-bold">无岸的Blog</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/authors/nopshore-author/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">关于</a>
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">文章</a>
+            <a href="/tags/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">标签</a>
+            <a href="/message-board/message/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">留言板</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+  </header>
+  <main class="flex-grow pt-16">
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+
+
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">Java容器详解</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2022-04-19</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>2分钟阅读时长</span>
+    </div>
+    
+    
+
+    
+</div>
+        
+        
+        
+
+        <div class="content">
+            <h2 id="容器相关接口继承结构">容器相关接口继承结构</h2>
+<ul>
+<li>Collection
+<ul>
+<li>List
+<ul>
+<li>ArrayList</li>
+<li>LinkedList</li>
+<li>Vector</li>
+</ul>
+</li>
+<li>Set
+<ul>
+<li>HashSet</li>
+<li>LinkedHashSet</li>
+<li>TreeSet</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Map
+<ul>
+<li>HashMap
+<ul>
+<li>LinkedHashMet</li>
+</ul>
+</li>
+<li>TreeMap</li>
+<li>ConcurrentHashMap</li>
+<li>Hashtable</li>
+</ul>
+</li>
+</ul>
+<h2 id="list接口">List接口</h2>
+<ul>
+<li>List接口存储的数据是<code>有序的、可重复的</code></li>
+</ul>
+<h3 id="arraylist">ArrayList</h3>
+<ol>
+<li>线程不安全</li>
+<li>可存储不同类型的对象</li>
+<li>底层使用数组存储数据，默认情况下是长度为10。当容量不足使扩容为原来容量的1.5倍</li>
+<li>需重写equals()方法</li>
+<li>添加元素效率高</li>
+</ol>
+<h3 id="linkedlist">LinkedList</h3>
+<ol>
+<li>线程不安全</li>
+<li>可存储不同类型的对象</li>
+<li>底层使用双向链表存储数据</li>
+<li>需重写equals()方法</li>
+<li>插入元素、删除元素效率高</li>
+</ol>
+<h3 id="vector">Vector</h3>
+<ol>
+<li>线程安全</li>
+<li>可存储不同类型的对象</li>
+<li>底层使用数组存储数据，默认情况下是长度为10。当容量不足使扩容为原来容量的2倍</li>
+<li>需重写equals()方法</li>
+<li>添加元素效率高</li>
+</ol>
+<h2 id="set接口">Set接口</h2>
+<ul>
+<li>Set接口存储的数据是<code>无序的、不可重复的</code></li>
+</ul>
+<h3 id="hashset">HashSet</h3>
+<ol>
+<li>线程不安全。</li>
+<li>可存储不同类型的对象。</li>
+<li>底层使用HashMap。</li>
+<li>需重写equals()、hashCode()方法。</li>
+<li>底层同时使用了数组和链表，存储数据时，通过计算hashcode得到应存放在在数组中的位置，如果此位置没有元素，则直接存入；有元素则判断hashcode是否相同，如若不相同则此位置元素指向新加入的元素（jdk8.0及以后）（jdk7.0及以前则放入新元素指向旧元素）；如若hashcode相同则调用新加入元素的equals()方法比较在此位置上的元素，如若不同则存入（此位置元素指向新加入的元素（jdk8.0及以后））；如若相同则存入失败。</li>
+</ol>
+<h3 id="linkedhashset">LinkedHashSet</h3>
+<ol>
+<li>线程不安全。</li>
+<li>可存储不同类型的对象。</li>
+<li>底层使用LinkedHashMap。</li>
+<li>需重写equals()、hashCode()方法。</li>
+<li>底层在HashSet的基础上加入了双向链表来记录元素的加入顺序。</li>
+</ol>
+<h3 id="treeset">TreeSet</h3>
+<ol>
+<li>线程不安全。</li>
+<li>不可存储不同类型的对象。</li>
+<li>底层使用TreeMap。</li>
+<li>需继承Comparable接口（compareTo()方法）或Comparator接口（compare()方法）。</li>
+<li>底层使用红黑树，加入元素时，小的放左子树，大的放右子树。</li>
+</ol>
+</br>
+</br>
+<blockquote>
+<p>本文作者：<a href="https://nopshore.top">无岸</a></p>
+<p>本文链接：<u><a href="">https://nopshore.top/posts/Java容器详解/</a></u></p>
+<p>本博客文章除特别声明外均为原创，采用 <u><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享署名-非商业性使用-相同方式共享 4.0 许可协议</a></u>。转载请注明出处!</p>
+</blockquote>
+
+        </div>
+        
+        <div class="my-4">
+    
+    <a href="https://nopshore.top/tags/java/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Java</a>
+    
+    <a href="https://nopshore.top/tags/%E9%9B%86%E5%90%88/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#集合</a>
+    
+    <a href="https://nopshore.top/tags/%E5%AE%B9%E5%99%A8/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#容器</a>
+    
+</div>
+        
+        
+        
+
+
+        
+        
+        <div class="py-2">
+    
+    <div class="flex flex-col md:flex-row items-center my-8">
+        <a href="https://nopshore.top/authors/nopshore-author/" class="w-24 h-24 md:mr-4">
+            
+            
+            <img src="https://nopshore.top/images/avatar-nopshore-6.jpg" class="w-full bg-primary-bg rounded-full" alt="Avatar">
+            
+        </a>
+        <div class="w-full md:w-auto mt-4 md:mt-0">
+            <a href="https://nopshore.top/authors/nopshore-author/" class="block font-bold text-lg pb-1 mb-2 border-b">无岸</a>
+            <span class="block pb-2">日出之美便在于它脱胎于最深的黑暗。</span>
+            
+            
+            
+            
+            
+            <a href="mailto:nopshore@163.com" class="mr-1">
+                <i class="fas fa-envelope"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="/index.xml" class="mr-1">
+                <i class="fas fa-rss"></i>
+            </a>
+            
+        </div>
+    </div>
+    
+</div>
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+        <span class="block font-bold">上一页</span>
+        <a href="https://nopshore.top/posts/java%E4%B8%ADstringstringbufferstringbuilder%E5%8C%BA%E5%88%AB/" class="block">Java中String、StringBuffer、StringBuilder区别</a>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">下一页</span>
+        <a href="https://nopshore.top/posts/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/" class="block">Java面向对象总结</a>
+        
+    </div>
+</div>
+
+        
+
+
+
+  <script id="utterances" src="https://utteranc.es/client.js"
+            issue-term=title
+            repo=NopShore/blog-comment
+              theme=preferred-color-scheme
+        crossorigin="anonymous"
+        async>
+</script>
+<script>
+    if (storageColorScheme == "Light") {
+      document.getElementById('utterances').setAttribute('theme', 'github-light')
+    } else if (storageColorScheme == "Dark") {
+      document.getElementById('utterances').setAttribute('theme', 'github-dark')
+    }
+</script>
+
+    </div>
+    
+    <div class="col-span-2">
+        
+        
+        <div class="sticky top-16 z-10 hidden lg:block px-6 py-4  bg-primary-bg ">
+    <span class="text-lg font-semibold">本页内容</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6 ">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#容器相关接口继承结构">容器相关接口继承结构</a></li>
+    <li><a href="#list接口">List接口</a>
+      <ul>
+        <li><a href="#arraylist">ArrayList</a></li>
+        <li><a href="#linkedlist">LinkedList</a></li>
+        <li><a href="#vector">Vector</a></li>
+      </ul>
+    </li>
+    <li><a href="#set接口">Set接口</a>
+      <ul>
+        <li><a href="#hashset">HashSet</a></li>
+        <li><a href="#linkedhashset">LinkedHashSet</a></li>
+        <li><a href="#treeset">TreeSet</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        enableStickyToc();
+    });
+</script>
+        
+    </div>
+    
+
+    
+    
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded p-6">
+        <h2 class="text-lg font-semibold mb-4">相关</h2>
+        <div class="content">
+            
+            <a href="https://nopshore.top/posts/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/">Java面向对象总结</a>
+            <br />
+            
+            <a href="https://nopshore.top/posts/java%E8%BF%90%E7%AE%97%E6%97%B6%E7%9A%84%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/">Java运算时的自动类型转换</a>
+            <br />
+            
+            <a href="https://nopshore.top/posts/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A6%82%E8%BF%B0%E4%BA%8C%E5%B0%81%E8%A3%85/">Java面向对象概述（二）：封装</a>
+            <br />
+            
+            <a href="https://nopshore.top/posts/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A6%82%E8%BF%B0%E4%B8%80%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%AE%9E%E4%BE%8B%E5%8C%96/">Java面向对象概述（一）：类的定义与实例化</a>
+            <br />
+            
+        </div>
+    </div>
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
+
+      </div>
+    </div>
+    
+  </main>
+  <footer class="pl-scrollbar">
+    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text">本博客文章除特别声明外均为原创，采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"> 知识共享署名-非商业性使用-相同方式共享 4.0 许可协议 </a> </br>
+&copy; 2019 - 2022 <a href="https://nopshore.top">无岸</a> · <a href="https://icp.gov.moe/?keyword=20210731" target="_blank">萌ICP备20210731号</a>
+ &middot;  Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+  </footer>
+</body>
+
+</html>

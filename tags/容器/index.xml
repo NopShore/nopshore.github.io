@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>容器 on 无岸的Blog</title>
+    <link>https://nopshore.top/tags/%E5%AE%B9%E5%99%A8/</link>
+    <description>Recent content in 容器 on 无岸的Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>本博客文章除特别声明外均为原创，采用&lt;a href=&#34;https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh&#34;&gt; 知识共享署名-非商业性使用-相同方式共享 4.0 许可协议 &lt;/a&gt; &lt;/br&gt;
+&amp;copy; 2019 - 2022 &lt;a href=&#34;https://nopshore.top&#34;&gt;无岸&lt;/a&gt; · &lt;a href=&#34;https://icp.gov.moe/?keyword=20210731&#34; target=&#34;_blank&#34;&gt;萌ICP备20210731号&lt;/a&gt;
+</copyright>
+    <lastBuildDate>Tue, 19 Apr 2022 00:10:29 +0800</lastBuildDate><atom:link href="https://nopshore.top/tags/%E5%AE%B9%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java容器详解</title>
+      <link>https://nopshore.top/posts/java%E5%AE%B9%E5%99%A8%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Tue, 19 Apr 2022 00:10:29 +0800</pubDate>
+      
+      <guid>https://nopshore.top/posts/java%E5%AE%B9%E5%99%A8%E8%AF%A6%E8%A7%A3/</guid>
+      <description>容器相关接口继承结构 Collection List ArrayList LinkedList Vector Set HashSet LinkedHashSet TreeSet Map HashMap LinkedHashMet TreeMap ConcurrentHashMap Hashtable List接口 List接口存储的数据是有序的、可重复的 ArrayList 线程不安全 可存储不同类型的对象 底层使</description>
+    </item>
+    
+  </channel>
+</rss>
