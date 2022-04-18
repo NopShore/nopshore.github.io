@@ -9,7 +9,16 @@
     <copyright>本博客文章除特别声明外均为原创，采用&lt;a href=&#34;https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh&#34;&gt; 知识共享署名-非商业性使用-相同方式共享 4.0 许可协议 &lt;/a&gt; &lt;/br&gt;
 &amp;copy; 2019 - 2022 &lt;a href=&#34;https://nopshore.top&#34;&gt;无岸&lt;/a&gt; · &lt;a href=&#34;https://icp.gov.moe/?keyword=20210731&#34; target=&#34;_blank&#34;&gt;萌ICP备20210731号&lt;/a&gt;
 </copyright>
-    <lastBuildDate>Tue, 19 Apr 2022 00:15:47 +0800</lastBuildDate><atom:link href="https://nopshore.top/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Apr 2022 01:28:17 +0800</lastBuildDate><atom:link href="https://nopshore.top/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java枚举类笔记</title>
+      <link>https://nopshore.top/posts/java%E6%9E%9A%E4%B8%BE%E7%B1%BB%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Tue, 19 Apr 2022 01:28:17 +0800</pubDate>
+      
+      <guid>https://nopshore.top/posts/java%E6%9E%9A%E4%B8%BE%E7%B1%BB%E7%AC%94%E8%AE%B0/</guid>
+      <description>方式一 私有化构造器 private final 修饰成员属性 public final static 创建对象（类似单例模式）枚举对象常量 重写toString()方法 继承自Object类 class EnumTest{ private final String name; private final</description>
+    </item>
+    
     <item>
       <title>Java中String、StringBuffer、StringBuilder区别</title>
       <link>https://nopshore.top/posts/java%E4%B8%ADstringstringbufferstringbuilder%E5%8C%BA%E5%88%AB/</link>
