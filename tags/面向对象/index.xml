@@ -21,19 +21,19 @@
     
     <item>
       <title>Java面向对象概述（二）：封装</title>
-      <link>https://nopshore.top/posts/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A6%82%E8%BF%B0%E4%BA%8C%E5%B0%81%E8%A3%85/</link>
+      <link>https://nopshore.top/posts/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%AC%94%E8%AE%B0%E4%BA%8C%E5%B0%81%E8%A3%85/</link>
       <pubDate>Fri, 11 Oct 2019 17:46:48 +0800</pubDate>
       
-      <guid>https://nopshore.top/posts/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A6%82%E8%BF%B0%E4%BA%8C%E5%B0%81%E8%A3%85/</guid>
+      <guid>https://nopshore.top/posts/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%AC%94%E8%AE%B0%E4%BA%8C%E5%B0%81%E8%A3%85/</guid>
       <description>封装的作用和优点 减少耦合 保护数据不被外界直接访问 使外部传进来的数据得到效验 保证了安全性 如何封装？ 使用访问权限修饰符对数据进行权限控制 public protected default private</description>
     </item>
     
     <item>
       <title>Java面向对象概述（一）：类的定义与实例化</title>
-      <link>https://nopshore.top/posts/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A6%82%E8%BF%B0%E4%B8%80%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%AE%9E%E4%BE%8B%E5%8C%96/</link>
+      <link>https://nopshore.top/posts/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%AC%94%E8%AE%B0%E4%B8%80%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%AE%9E%E4%BE%8B%E5%8C%96/</link>
       <pubDate>Fri, 11 Oct 2019 15:48:42 +0800</pubDate>
       
-      <guid>https://nopshore.top/posts/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%A6%82%E8%BF%B0%E4%B8%80%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%AE%9E%E4%BE%8B%E5%8C%96/</guid>
+      <guid>https://nopshore.top/posts/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%AC%94%E8%AE%B0%E4%B8%80%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%AE%9E%E4%BE%8B%E5%8C%96/</guid>
       <description>面向对象三大特征 封装 保护数据不被外部访问 继承 对父类功能的扩展 多态 一个对象的多种形态 类和对象 类是对某一类事物的具有相同特征的抽象，是对象的模板</description>
     </item>
     
