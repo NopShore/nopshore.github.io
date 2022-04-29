@@ -38,12 +38,12 @@
     </item>
     
     <item>
-      <title>Java容器笔记</title>
-      <link>https://nopshore.top/posts/java%E5%AE%B9%E5%99%A8%E7%AC%94%E8%AE%B0/</link>
+      <title>Java集合笔记</title>
+      <link>https://nopshore.top/posts/java%E9%9B%86%E5%90%88%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Tue, 19 Apr 2022 00:10:29 +0800</pubDate>
       
-      <guid>https://nopshore.top/posts/java%E5%AE%B9%E5%99%A8%E7%AC%94%E8%AE%B0/</guid>
-      <description>容器相关接口继承结构 Collection List ArrayList LinkedList Vector Set HashSet LinkedHashSet TreeSet Map HashMap LinkedHashMet TreeMap Hashtable properties ConcurrentHashMap List接口 List接口存储的数据是有序的、可重复的 ArrayList 线程不安全 可存储不同类型的对象 底层</description>
+      <guid>https://nopshore.top/posts/java%E9%9B%86%E5%90%88%E7%AC%94%E8%AE%B0/</guid>
+      <description>容器相关接口继承结构 Collection List ArrayList LinkedList Vector Set HashSet LinkedHashSet TreeSet Map HashMap LinkedHashMap TreeMap Hashtable properties ConcurrentHashMap List接口 List接口存储的数据是有序的、可重复的 ArrayList 线程不安全 可存储不同类型的对象 底层</description>
     </item>
     
     <item>
@@ -119,21 +119,21 @@
     </item>
     
     <item>
-      <title>我在Linux上的常用软件（长期更新）</title>
-      <link>https://nopshore.top/posts/%E6%88%91%E5%9C%A8linux%E4%B8%8A%E7%9A%84%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E9%95%BF%E6%9C%9F%E6%9B%B4%E6%96%B0/</link>
-      <pubDate>Thu, 26 Sep 2019 15:16:17 +0800</pubDate>
-      
-      <guid>https://nopshore.top/posts/%E6%88%91%E5%9C%A8linux%E4%B8%8A%E7%9A%84%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E9%95%BF%E6%9C%9F%E6%9B%B4%E6%96%B0/</guid>
-      <description>操作系统：ArchLinux (Arch死忠粉一枚) 桌面环境：KDE (plasma) 音乐： netease-cloud-music (网易云音乐) Listen1 (集成了网易云、虾米、QQ音乐、酷狗等各大平台的</description>
-    </item>
-    
-    <item>
       <title>解决proxychains不支持yay的问题</title>
       <link>https://nopshore.top/posts/%E8%A7%A3%E5%86%B3proxychains%E4%B8%8D%E6%94%AF%E6%8C%81yay%E7%9A%84%E9%97%AE%E9%A2%98/</link>
       <pubDate>Thu, 26 Sep 2019 15:16:17 +0800</pubDate>
       
       <guid>https://nopshore.top/posts/%E8%A7%A3%E5%86%B3proxychains%E4%B8%8D%E6%94%AF%E6%8C%81yay%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
       <description>问题如下 $ proxychains yay -S petal [proxychains] config file found: /etc/proxychains.conf [proxychains] preloading /usr/lib/libproxychains4.so [proxychains] DLL init: proxychains-ng 4.14 Get https://aur.archlinux.org/rpc.php?arg%5B%5D=petal&amp;amp;type=info&amp;amp;v=5: dial tcp 224.0.0.1:443: connect: network is unreachable 解决方法 修改proxychains配置文件，把proxy_dns注释掉。 打开p</description>
+    </item>
+    
+    <item>
+      <title>我在Linux上的常用软件（长期更新）</title>
+      <link>https://nopshore.top/posts/%E6%88%91%E5%9C%A8linux%E4%B8%8A%E7%9A%84%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E9%95%BF%E6%9C%9F%E6%9B%B4%E6%96%B0/</link>
+      <pubDate>Thu, 26 Sep 2019 15:16:17 +0800</pubDate>
+      
+      <guid>https://nopshore.top/posts/%E6%88%91%E5%9C%A8linux%E4%B8%8A%E7%9A%84%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E9%95%BF%E6%9C%9F%E6%9B%B4%E6%96%B0/</guid>
+      <description>操作系统：ArchLinux (Arch死忠粉一枚) 桌面环境：KDE (plasma) 音乐： netease-cloud-music (网易云音乐) Listen1 (集成了网易云、虾米、QQ音乐、酷狗等各大平台的</description>
     </item>
     
     <item>
